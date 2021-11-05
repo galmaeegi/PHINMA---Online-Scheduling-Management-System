@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="purpose">
+        <item></item>
+        <item>Tuition</item>
+        <item>Uniform</item>
+        <item>Modules</item>
+        <item>Books</item>
+    </string-array>
+
+    <string-array name="date">
+        <item></item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+    </string-array>
+
+    <string-array name="time">
+        <item></item>
+        <item>8AM-12PM</item>
+        <item>1PM-4:30PM</item>
+    </string-array>
+
+
+
+</resources>
