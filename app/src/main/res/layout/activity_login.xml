@@ -11,6 +11,7 @@
 
     <!--Username-->
 
+    <!--Password-->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="415dp"
@@ -22,7 +23,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/banner_big" />
 
-    <!--Password-->
     <EditText
         android:id="@+id/id"
         android:layout_width="283dp"
