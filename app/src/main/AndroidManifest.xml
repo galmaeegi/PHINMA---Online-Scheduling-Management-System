@@ -10,13 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineSchedulingSystem">
         <activity
-            android:name=".adminSignUp"
+            android:name=".AdminSignUp"
             android:exported="false" />
         <activity
             android:name=".ChangePassword"
-            android:exported="false" />
-        <activity
-            android:name=".Review"
             android:exported="false" />
         <activity
             android:name=".Overview"
