@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminSignUp">
+
+
+    <ImageView
+        android:id="@+id/imageview7"
+        android:layout_width="415dp"
+        android:layout_height="210dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/banner_big" />
+
+    <EditText
+        android:id="@+id/admin"
+        android:layout_width="283dp"
+        android:layout_height="57dp"
+
+
+        android:layout_marginTop="12dp"
+        android:background="@drawable/border_user"
+        android:drawableStart="@drawable/ic_user"
+        android:drawableLeft="@drawable/ic_user"
+        android:drawablePadding="30dp"
+
+        android:elevation="10dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Admin ID"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingLeft="15dp"
+        android:textColor="#000000"
+        android:textColorHint="#737373"
+        app:layout_constraintBottom_toTopOf="@+id/adminpassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview6" />
+
+    <EditText
+        android:id="@+id/adminpassword"
+        android:layout_width="283dp"
+        android:layout_height="58dp"
+
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/border_pass"
+        android:drawableStart="@drawable/ic_password"
+
+        android:drawableLeft="@drawable/ic_password"
+        android:drawablePadding="30dp"
+        android:elevation="10dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingLeft="15dp"
+        android:textColor="#000000"
+        android:textColorHint="#737373"
+        app:layout_constraintBottom_toTopOf="@+id/adminproceed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admin" />
+
+    <ImageView
+        android:id="@+id/imageview6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/admin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview7"
+        app:srcCompat="@drawable/signin" />
+
+    <ImageButton
+        android:id="@+id/adminproceed"
+        android:layout_width="245dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="176dp"
+        android:background="#00F4F4F4"
+        android:scaleType="center"
+        android:src="@drawable/proceed"
+        app:layout_constraintBottom_toBottomOf="@+id/credits6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview7"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/Credits2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="146dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/poppins"
+        android:text="©2021 - B2G4 - All Rights Reserved."
+        android:textColor="#BFBFBF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminproceed" />
+
+    <TextView
+        android:id="@+id/credits6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="PHINMA - University of Pangasinan"
+        android:textColor="#BFBFBF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
