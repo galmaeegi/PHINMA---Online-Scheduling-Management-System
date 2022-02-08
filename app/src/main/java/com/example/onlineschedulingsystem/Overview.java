@@ -17,10 +17,20 @@ public class Overview extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_overview);
 
+        TextView studentDisplay = findViewById(R.id.studentno_text_view);
+        TextView departmentDisplay = findViewById(R.id.department_text_view);
         TextView purposeDisplay = findViewById(R.id.purpose_text_view);
         TextView dateDisplay = findViewById(R.id.date_text_view);
         TextView timeDisplay = findViewById(R.id.time_text_view);
+
         Bundle bn = getIntent().getExtras();
+
+        String student = bn.getString("studentKey");
+        studentDisplay.setText(student);
+
+        String dept = bn.getString("departmentKey");
+        departmentDisplay.setText(dept);
+
         String purpose = bn.getString("purposeKey");
         purposeDisplay.setText(purpose);
 

@@ -33,39 +33,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/lbl_time_r2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginEnd="65dp"
-        android:fontFamily="@font/poppins"
-        android:text="Time:"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/lbl_reminders2"
-        app:layout_constraintEnd_toStartOf="@+id/time_text_view"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_date_r2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/lbl_date_r2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginEnd="127dp"
-        android:fontFamily="@font/poppins"
-        android:text="Day:"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/lbl_time_r2"
-        app:layout_constraintEnd_toStartOf="@+id/date_text_view"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_purpose_r2" />
-
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="415dp"
@@ -78,51 +45,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/banner_big" />
-
-    <TextView
-        android:id="@+id/lbl_reminders2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="440dp"
-        android:layout_marginBottom="7dp"
-        android:fontFamily="@font/poppins"
-        android:gravity="center_horizontal"
-        android:text="Reminders:"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/lbl_reminders_c_r2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/lbl_reminders_c_r2"
-        android:layout_width="293dp"
-        android:layout_height="42dp"
-        android:gravity="center_horizontal"
-        android:text="Arrive at school on time and wear your facemask and faceshield"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/signout_review2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_reminders2" />
-
-    <ImageButton
-        android:id="@+id/signout_review2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:background="#FFFFFF"
-        android:src="@drawable/signoutbig"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_reminders_c_r2"
-        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/lbl_success2"
@@ -143,70 +65,179 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <TextView
-        android:id="@+id/time_text_view"
-        android:layout_width="115dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="90dp"
+        android:id="@+id/lbl_studentno_r2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
-        android:text="8AM-12PM"
-        android:textAlignment="textEnd"
-        android:textColor="#000000"
+        android:text="Student No:"
+        android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/lbl_reminders2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date_text_view" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_success2" />
 
     <TextView
-        android:id="@+id/purpose_text_view"
-        android:layout_width="97dp"
-        android:layout_height="32dp"
+        android:id="@+id/studentno_text_view"
+        android:layout_width="164dp"
+        android:layout_height="31dp"
         android:layout_marginStart="224dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="90dp"
         android:fontFamily="@font/poppins"
-        android:text="Purpose"
+        android:text="03-1920-03279"
         android:textAlignment="textEnd"
         android:textColor="#000000"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/date_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_success2" />
+
+    <TextView
+        android:id="@+id/lbl_department_r2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="77dp"
+        android:fontFamily="@font/poppins"
+        android:text="Department:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/department_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_studentno_r2" />
+
+    <TextView
+        android:id="@+id/department_text_view"
+        android:layout_width="97dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="58dp"
+        android:fontFamily="@font/poppins"
+        android:text="CITE"
+        android:textAlignment="textEnd"
+        android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_success2" />
+        app:layout_constraintTop_toBottomOf="@+id/studentno_text_view" />
 
     <TextView
         android:id="@+id/lbl_purpose_r2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="62dp"
         android:fontFamily="@font/poppins"
         android:text="Purpose:"
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/lbl_date_r2"
         app:layout_constraintEnd_toStartOf="@+id/purpose_text_view"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_success2"
-        app:layout_constraintVertical_bias="0.24" />
+        app:layout_constraintTop_toBottomOf="@+id/lbl_department_r2" />
+
+    <TextView
+        android:id="@+id/purpose_text_view"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="59dp"
+        android:fontFamily="@font/poppins"
+        android:text="Purpose"
+        android:textAlignment="textEnd"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/department_text_view" />
+
+    <TextView
+        android:id="@+id/lbl_date_r2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="159dp"
+        android:fontFamily="@font/poppins"
+        android:text="Day:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/date_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_purpose_r2" />
 
     <TextView
         android:id="@+id/date_text_view"
         android:layout_width="97dp"
         android:layout_height="32dp"
-        android:layout_marginStart="224dp"
-        android:layout_marginEnd="90dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="58dp"
         android:fontFamily="@font/poppins"
         android:text="Monday"
         android:textAlignment="textEnd"
         android:textColor="#000000"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/time_text_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/purpose_text_view" />
+
+    <TextView
+        android:id="@+id/lbl_time_r2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="130dp"
+        android:fontFamily="@font/poppins"
+        android:text="Time:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/time_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_date_r2" />
+
+    <TextView
+        android:id="@+id/time_text_view"
+        android:layout_width="115dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="59dp"
+        android:fontFamily="@font/poppins"
+        android:text="8AM-12PM"
+        android:textAlignment="textEnd"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_text_view" />
+
+    <TextView
+        android:id="@+id/lbl_reminders_c_r2"
+        android:layout_width="293dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center_horizontal"
+        android:text="Arrive at school on time and wear your facemask and faceshield"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_text_view" />
+
+    <ImageButton
+        android:id="@+id/signout_review2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#FFFFFF"
+        android:src="@drawable/signoutbig"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_reminders_c_r2"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

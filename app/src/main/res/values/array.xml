@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string-array name="department">
+        <item></item>
+        <item>CITE</item>
+        <item>CAS</item>
+        <item>CMA</item>
+        <item>CEA</item>
+        <item>CSS</item>
+        <item>CHS</item>
+    </string-array>
+
     <string-array name="purpose">
         <item></item>
         <item>Tuition</item>
-        <item>Uniform</item>
-        <item>Modules</item>
-        <item>Books</item>
+        <item>Enrollment</item>
     </string-array>
 
     <string-array name="date">
@@ -20,8 +28,15 @@
 
     <string-array name="time">
         <item></item>
-        <item>8AM-12PM</item>
-        <item>1PM-4:30PM</item>
+        <item>8AM-9AM</item>
+        <item>9AM-10AM</item>
+        <item>10AM-11AM</item>
+        <item>11AM-12NN</item>
+        <item>--LUNCHBREAK--</item>
+        <item>1PM-2PM</item>
+        <item>2PM-3PM</item>
+        <item>3PM-4PM</item>
+        <item>4PM-5PM</item>
     </string-array>
 
 

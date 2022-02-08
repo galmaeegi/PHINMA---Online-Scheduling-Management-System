@@ -2,12 +2,15 @@ package com.example.onlineschedulingsystem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class AdminInterface extends AppCompatActivity {
+
 
     private Button Next;
     private Button Rest;
@@ -17,7 +20,7 @@ public class AdminInterface extends AppCompatActivity {
     private View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            switch (view.getId()){
+            switch (view.getId()) {
                 case R.id.Next:
                     plusConter();
                     break;
@@ -29,8 +32,21 @@ public class AdminInterface extends AppCompatActivity {
         }
     };
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Small Sign Out
+        ImageButton smallSignOut = (ImageButton) findViewById(R.id.signout_button);
+
+        smallSignOut.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(AdminInterface.this,Login.class));
+
+            }
+        });
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_interface);
         counterTxt = (TextView) findViewById(R.id.countertxt);
@@ -39,6 +55,7 @@ public class AdminInterface extends AppCompatActivity {
         Rest = (Button) findViewById(R.id.Rest);
         Rest.setOnClickListener(clickListener);
         initCounter();
+
     }
     private void initCounter() {
         counter = 0;
@@ -49,4 +66,7 @@ public class AdminInterface extends AppCompatActivity {
         counter++;
         counterTxt.setText(counter + "");
     }
+
+
 }
+

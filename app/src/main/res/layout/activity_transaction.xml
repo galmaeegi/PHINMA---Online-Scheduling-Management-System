@@ -6,17 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Transaction">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="421dp"
-        android:layout_height="170dp"
-
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/banner_smaller" />
-
     <TextView
         android:id="@+id/credits2"
         android:layout_width="wrap_content"
@@ -44,57 +33,42 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageButton
-        android:id="@+id/signout_button"
-        android:layout_width="66dp"
-        android:layout_height="37dp"
-        android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.988"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.01"
-        app:srcCompat="@drawable/signoutsmall"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-    <ImageButton
-        android:id="@+id/proceed_button2"
-        android:layout_width="246dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="77dp"
-        android:background="#00F4F4F4"
-        android:scaleType="center"
-        android:src="@drawable/proceed"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time_spinner"
-        tools:ignore="SpeakableTextPresentCheck" />
-
     <TextView
-        android:id="@+id/lbl_purpose"
+        android:id="@+id/lbl_student"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="19dp"
         android:layout_marginEnd="216dp"
         android:fontFamily="@font/poppins"
-        android:text="Purpose of Transaction"
-        app:layout_constraintBottom_toTopOf="@+id/purpose_spinner"
+        android:text="Student Number"
+        app:layout_constraintBottom_toTopOf="@+id/studentno_input"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintHorizontal_bias="0.22"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/choose"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/choose" />
+
+    <EditText
+        android:id="@+id/studentno_input"
+        android:layout_width="218dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="51dp"
+        android:background="@drawable/gradient_spinner"
+        android:ems="10"
+        android:inputType="number|phone"
+        app:layout_constraintBottom_toTopOf="@+id/dept_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_student"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Spinner
-        android:id="@+id/purpose_spinner"
+        android:id="@+id/dept_spinner"
         android:layout_width="320dp"
         android:layout_height="52dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="80dp"
         android:layout_marginEnd="6dp"
         android:background="@drawable/gradient_spinner"
         android:elevation="2dp"
@@ -102,7 +76,55 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.369"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_dept"
+        tools:ignore="SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
+
+    <TextView
+        android:id="@+id/lbl_dept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="216dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/poppins"
+        android:text="Department"
+        app:layout_constraintBottom_toTopOf="@+id/dept_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentno_input" />
+
+    <TextView
+        android:id="@+id/lbl_purpose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="216dp"
+        android:fontFamily="@font/poppins"
+        android:text="Purpose of Transaction"
+        app:layout_constraintBottom_toTopOf="@+id/purpose_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dept_spinner"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/purpose_spinner"
+        android:layout_width="320dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/gradient_spinner"
+        android:elevation="2dp"
+        android:popupBackground="@android:drawable/dialog_holo_light_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dept_spinner"
         tools:ignore="SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
 
     <TextView
@@ -151,6 +173,20 @@
         app:layout_constraintTop_toBottomOf="@+id/date_spinner"
         app:layout_constraintVertical_bias="1.0" />
 
+    <TextView
+        android:id="@+id/lbl_time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="334dp"
+        android:fontFamily="@font/poppins"
+        android:text="Time"
+        app:layout_constraintBottom_toTopOf="@+id/time_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_spinner"
+        app:layout_constraintVertical_bias="1.0" />
+
     <Spinner
         android:id="@+id/time_spinner"
         android:layout_width="208dp"
@@ -167,20 +203,52 @@
         app:layout_constraintTop_toBottomOf="@+id/date_spinner"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <ImageButton
+        android:id="@+id/signout_button"
+        android:layout_width="66dp"
+        android:layout_height="37dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.988"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        app:srcCompat="@drawable/signoutsmall"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/proceed_button2"
+        android:layout_width="246dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="77dp"
+        android:background="#00F4F4F4"
+        android:scaleType="center"
+        android:src="@drawable/proceed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_spinner"
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <TextView
         android:id="@+id/choose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="80dp"
+        android:layout_marginBottom="19dp"
         android:fontFamily="@font/poppins"
         android:text="PLEASE CHOOSE THE FOLLOWING"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_student"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

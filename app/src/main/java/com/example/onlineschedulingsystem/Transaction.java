@@ -9,6 +9,7 @@ import android.view.View;
 
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -17,9 +18,10 @@ import android.widget.TextView;
 public class Transaction extends AppCompatActivity{
 
 
-    Spinner purpose_spinner, date_spinner, time_spinner;
+    Spinner dept_spinner, purpose_spinner, date_spinner, time_spinner;
     TextView purpose_view1, date_view, time_view, purposeTxt;
-    String valueFromPurpose, valueFromDate, valueFromTime;
+    EditText student_no;
+    String valueFromStudent, valueFromDept, valueFromPurpose, valueFromDate, valueFromTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,20 +32,31 @@ public class Transaction extends AppCompatActivity{
         /*Proceed Button*/
         ImageButton save = (ImageButton) findViewById(R.id.proceed_button2);
 
+        /*EditText Variables*/
+        student_no = findViewById(R.id.studentno_input);
+
 
         /*Spinner varbiables*/
         purposeTxt = findViewById(R.id.purpose_text_view);
+        dept_spinner = findViewById(R.id.dept_spinner);
         purpose_spinner = findViewById(R.id.purpose_spinner);
         date_spinner = findViewById(R.id.date_spinner);
         time_spinner = findViewById(R.id.time_spinner);
 
 
 
+        /*Department Spinner*/
+        String[] departmentArray = getResources().getStringArray(R.array.department);
+        ArrayAdapter departmentAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, departmentArray);
+        departmentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dept_spinner.setAdapter(departmentAdapter);
+
         /*Purpose Spinner*/
         String[] purposeArray = getResources().getStringArray(R.array.purpose);
         ArrayAdapter purposeAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, purposeArray);
         purposeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         purpose_spinner.setAdapter(purposeAdapter);
+
 
 
         /*Date Spinner*/
@@ -58,6 +71,20 @@ public class Transaction extends AppCompatActivity{
         dateAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         time_spinner.setAdapter(timeAdapter);
 
+        /*DEPARTMENT = setOnItemSelectedLister*/
+        dept_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                valueFromDept = parent.getItemAtPosition(position).toString();
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 
         /*PURPOSE = setOnItemSelectedLister*/
@@ -107,11 +134,12 @@ public class Transaction extends AppCompatActivity{
 
 
 
-
-
         save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(Transaction.this,Overview.class);
+                valueFromStudent = student_no.getText().toString();
+                intent.putExtra("studentKey",valueFromStudent);
+                intent.putExtra("departmentKey",valueFromDept);
                 intent.putExtra("purposeKey",valueFromPurpose);
                 intent.putExtra("dateKey",valueFromDate);
                 intent.putExtra("timeKey",valueFromTime);
@@ -119,6 +147,17 @@ public class Transaction extends AppCompatActivity{
 
             }
         });
+
+        ImageButton smallSignOut = (ImageButton) findViewById(R.id.signout_button);
+
+        smallSignOut.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(Transaction.this,Login.class));
+
+            }
+        });
+
+
 
     }
 

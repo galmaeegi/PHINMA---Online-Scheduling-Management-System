@@ -20,7 +20,7 @@ public class Login extends AppCompatActivity {
 
         androidImageButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(Login.this,Transaction.class));
+                startActivity(new Intent(Login.this,MainPage.class));
 
             }
         });
