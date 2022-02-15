@@ -6,6 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".Authority">
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="356dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/phinma4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/teamlogo" />
+
+    <TextView
+        android:id="@+id/phinma2"
+        android:layout_width="409dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:fontFamily="@font/poppins"
+        android:lineSpacingExtra="-10sp"
+        android:text="ONLINE SCHEDULING MANAGEMENT SYSTEM"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
     <Button
         android:id="@+id/auth_student"
 
@@ -13,7 +42,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="105dp"
 
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="106dp"
         android:background="@drawable/buttonshape"
         android:shadowColor="#A8A8A8"
@@ -82,27 +111,11 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="328dp"
-        android:layout_height="114dp"
-        android:layout_marginStart="174dp"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="179dp"
-        android:fontFamily="@font/poppins"
-        android:text="Welcome to the PHINMA University Online Scheduling Management System!"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textView3"
         android:layout_width="326dp"
         android:layout_height="36dp"
         android:layout_marginStart="174dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="179dp"
         android:fontFamily="@font/poppins"
         android:text="Logging in as?"
@@ -111,6 +124,7 @@
         app:layout_constraintBottom_toTopOf="@+id/auth_student"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phinma2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

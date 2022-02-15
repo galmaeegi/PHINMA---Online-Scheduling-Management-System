@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/banner_big" />
 
     <EditText
-        android:id="@+id/admin"
+        android:id="@+id/admin_user"
         android:layout_width="283dp"
         android:layout_height="57dp"
 
@@ -37,13 +37,13 @@
         android:paddingLeft="15dp"
         android:textColor="#000000"
         android:textColorHint="#737373"
-        app:layout_constraintBottom_toTopOf="@+id/adminpassword"
+        app:layout_constraintBottom_toTopOf="@+id/admin_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageview7" />
 
     <EditText
-        android:id="@+id/adminpassword"
+        android:id="@+id/admin_password"
         android:layout_width="283dp"
         android:layout_height="58dp"
 
@@ -62,13 +62,13 @@
         android:paddingLeft="15dp"
         android:textColor="#000000"
         android:textColorHint="#737373"
-        app:layout_constraintBottom_toTopOf="@+id/adminproceed"
+        app:layout_constraintBottom_toTopOf="@+id/admin_proceed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/admin" />
+        app:layout_constraintTop_toBottomOf="@+id/admin_user" />
 
     <ImageButton
-        android:id="@+id/adminproceed"
+        android:id="@+id/admin_proceed"
         android:layout_width="245dp"
         android:layout_height="80dp"
         android:layout_marginStart="83dp"
@@ -82,7 +82,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adminpassword"
+        app:layout_constraintTop_toBottomOf="@+id/admin_password"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -98,7 +98,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adminproceed" />
+        app:layout_constraintTop_toBottomOf="@+id/admin_proceed" />
 
     <TextView
         android:id="@+id/credits6"

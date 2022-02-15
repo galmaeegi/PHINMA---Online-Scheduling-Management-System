@@ -22,7 +22,7 @@ public class AdminInterface extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()) {
                 case R.id.Next:
-                    plusConter();
+                    plusCounter();
                     break;
                 case R.id.Rest:
                     initCounter();
@@ -62,7 +62,7 @@ public class AdminInterface extends AppCompatActivity {
         counterTxt.setText(counter + "");
 
     }
-    private void plusConter(){
+    private void plusCounter(){
         counter++;
         counterTxt.setText(counter + "");
     }
