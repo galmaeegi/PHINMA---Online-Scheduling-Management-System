@@ -36,25 +36,23 @@ public class AdminInterface extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //Small Sign Out
-        ImageButton smallSignOut = (ImageButton) findViewById(R.id.signout_button);
-
-        smallSignOut.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                startActivity(new Intent(AdminInterface.this,Login.class));
-
-            }
-        });
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_interface);
+
+        //Small Sign Out
+        ImageButton smallSignOut = (ImageButton) findViewById(R.id.signout_button);
         counterTxt = (TextView) findViewById(R.id.countertxt);
         Next = (Button) findViewById(R.id.Next);
         Next.setOnClickListener(clickListener);
         Rest = (Button) findViewById(R.id.Rest);
         Rest.setOnClickListener(clickListener);
         initCounter();
+        smallSignOut.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    startActivity(new Intent(AdminInterface.this,Login.class));
+
+                }
+            });
 
     }
     private void initCounter() {
