@@ -27,9 +27,6 @@
             android:name=".AdminInterface"
             android:exported="false" />
         <activity
-            android:name=".ChangePassword"
-            android:exported="false" />
-        <activity
             android:name=".Overview"
             android:exported="false" />
         <activity
