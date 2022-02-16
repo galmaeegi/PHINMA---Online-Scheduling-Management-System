@@ -41,7 +41,7 @@ public class MainPage extends AppCompatActivity {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainPage.this, ChangePassword.class));
+                startActivity(new Intent(MainPage.this, Login.class));
             }
         });
 

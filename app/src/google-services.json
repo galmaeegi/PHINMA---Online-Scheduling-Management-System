@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "113808792040",
+    "firebase_url": "https://phinma-osms-default-rtdb.firebaseio.com",
+    "project_id": "phinma-osms",
+    "storage_bucket": "phinma-osms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113808792040:android:e11b08ed82fa66238b2c5d",
+        "android_client_info": {
+          "package_name": "com.example.onlineschedulingsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113808792040-mad8nhbhls9op5p1o3r35u115hkv0hgo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.onlineschedulingsystem",
+            "certificate_hash": "eb941cbabfdd296832fdbf0d9b190e0c81d4ed7b"
+          }
+        },
+        {
+          "client_id": "113808792040-6ku95a29cfrifit9sm9ij9k94ugn0nsl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5jvH_8KzadmKGt02iTox12eeylnWxbDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113808792040-6ku95a29cfrifit9sm9ij9k94ugn0nsl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
