@@ -14,14 +14,18 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 public class Transaction extends AppCompatActivity{
 
 
-    Spinner dept_spinner, purpose_spinner, date_spinner, time_spinner;
-    TextView purpose_view1, date_view, time_view, purposeTxt;
+    Spinner dept_spinner, purpose_spinner, date_spinner;
+    TextView purpose_view1, date_view, purposeTxt;
     EditText student_no;
-    String valueFromStudent, valueFromDept, valueFromPurpose, valueFromDate, valueFromTime;
+    String valueFromStudent, valueFromDept, valueFromPurpose, valueFromDate;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +45,9 @@ public class Transaction extends AppCompatActivity{
         dept_spinner = findViewById(R.id.dept_spinner);
         purpose_spinner = findViewById(R.id.purpose_spinner);
         date_spinner = findViewById(R.id.date_spinner);
-        time_spinner = findViewById(R.id.time_spinner);
+        
+
+
 
 
 
@@ -65,11 +71,6 @@ public class Transaction extends AppCompatActivity{
         dateAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         date_spinner.setAdapter(dateAdapter);
 
-        /*Time Spinner*/
-        String[] timeArray = getResources().getStringArray(R.array.time);
-        ArrayAdapter timeAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, timeArray);
-        dateAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        time_spinner.setAdapter(timeAdapter);
 
         /*DEPARTMENT = setOnItemSelectedLister*/
         dept_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -107,21 +108,9 @@ public class Transaction extends AppCompatActivity{
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 valueFromDate = parent.getItemAtPosition(position).toString();
+                if (valueFromDate.equals("Monday")) {
 
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        /*TIME = setOnItemSelectedLister*/
-        time_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                valueFromTime = parent.getItemAtPosition(position).toString();
+                }
 
 
             }
@@ -142,7 +131,6 @@ public class Transaction extends AppCompatActivity{
                 intent.putExtra("departmentKey",valueFromDept);
                 intent.putExtra("purposeKey",valueFromPurpose);
                 intent.putExtra("dateKey",valueFromDate);
-                intent.putExtra("timeKey",valueFromTime);
                 startActivity(intent);
 
             }

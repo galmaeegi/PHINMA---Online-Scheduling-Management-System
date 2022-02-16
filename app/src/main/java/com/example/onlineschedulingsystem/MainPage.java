@@ -33,7 +33,7 @@ public class MainPage extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainPage.this, Transaction.class));
+                startActivity(new Intent(MainPage.this, TransactionSample.class));
             }
         });
 

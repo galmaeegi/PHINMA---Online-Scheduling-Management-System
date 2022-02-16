@@ -159,50 +159,6 @@
         app:layout_constraintTop_toBottomOf="@+id/purpose_spinner"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/lbl_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="334dp"
-        android:fontFamily="@font/poppins"
-        android:text="Time"
-        app:layout_constraintBottom_toTopOf="@+id/time_spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date_spinner"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/lbl_time2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="334dp"
-        android:fontFamily="@font/poppins"
-        android:text="Time"
-        app:layout_constraintBottom_toTopOf="@+id/time_spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date_spinner"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Spinner
-        android:id="@+id/time_spinner"
-        android:layout_width="208dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="6dp"
-        android:background="@drawable/gradient_spinner"
-        android:elevation="2dp"
-        android:popupBackground="@android:drawable/dialog_holo_light_frame"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date_spinner"
-        tools:ignore="SpeakableTextPresentCheck" />
-
     <ImageButton
         android:id="@+id/signout_button"
         android:layout_width="66dp"
@@ -222,15 +178,15 @@
         android:layout_width="246dp"
         android:layout_height="66dp"
         android:layout_marginStart="76dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="77dp"
         android:background="#00F4F4F4"
         android:scaleType="center"
         android:src="@drawable/proceed"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/date_spinner"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
