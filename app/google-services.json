@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "113808792040",
+    "firebase_url": "https://phinma-osms-default-rtdb.firebaseio.com",
     "project_id": "phinma-osms",
     "storage_bucket": "phinma-osms.appspot.com"
   },
