@@ -18,7 +18,7 @@ public class Authority extends AppCompatActivity {
         auth_btn_student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Authority.this, Login.class));
+                startActivity(new Intent(Authority.this, Transaction.class));
             }
         });
 

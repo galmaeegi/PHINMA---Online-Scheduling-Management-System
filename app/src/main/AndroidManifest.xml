@@ -16,6 +16,9 @@
             android:name=".StudentQueue"
             android:exported="false" />
         <activity
+            android:name=".Transaction"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
@@ -29,9 +32,6 @@
             android:exported="false" />
         <activity
             android:name=".Overview"
-            android:exported="false" />
-        <activity
-            android:name=".Transaction"
             android:exported="false" />
         <activity
             android:name=".Authority"

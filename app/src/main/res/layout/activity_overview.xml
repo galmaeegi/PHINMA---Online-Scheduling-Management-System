@@ -191,21 +191,22 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="130dp"
         android:fontFamily="@font/poppins"
-        android:text="Time:"
+        android:text="Queue: "
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/time_text_view"
+        app:layout_constraintEnd_toStartOf="@+id/queue_text_view"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl_date_r2" />
 
     <TextView
-        android:id="@+id/time_text_view"
+        android:id="@+id/queue_text_view"
         android:layout_width="115dp"
         android:layout_height="32dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="59dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="56dp"
         android:fontFamily="@font/poppins"
-        android:text="8AM-12PM"
+        android:text="1"
         android:textAlignment="textEnd"
         android:textColor="#000000"
         android:textSize="20dp"
@@ -225,7 +226,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/queue_text_view" />
 
     <ImageButton
         android:id="@+id/signout_review2"
