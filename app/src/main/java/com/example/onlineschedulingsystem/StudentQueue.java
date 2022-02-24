@@ -28,36 +28,32 @@ import java.util.Map;
 
 public class StudentQueue extends AppCompatActivity {
 
+    TextView textView;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
-    private TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_queue);
 
-    firebaseDatabase = FirebaseDatabase.getInstance();
-    databaseReference = firebaseDatabase.getReference("Queue");
+        textView = findViewById(R.id.StudentCounter);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        ///Getting Child Data///
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("QUEUE");
 
-    textView = findViewById(R.id.StudentCounter);
-
-    getdata();
-    }
-
-    private void getdata(){
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        reference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String value = snapshot.getValue(String.class);
-
-                textView.setText(value);
+            ///Setting data in TextView///
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            String data = dataSnapshot.child("Current Number").getValue().toString();
+            textView.setText(data);
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(StudentQueue.this, "Failed to get data.", Toast.LENGTH_SHORT).show();
+
             }
         });
+
     }
 }
