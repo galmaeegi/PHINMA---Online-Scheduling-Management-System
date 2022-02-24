@@ -43,9 +43,14 @@ public class AdminInterface extends AppCompatActivity {
                     break;
             }
             String counter = counterTxt.getText().toString();
+            root = FirebaseDatabase.getInstance().getReference().child("QUEUE");
+            root.child(String.valueOf(Integer.parseInt(counter+1)));
+
+
             HashMap<String, String> usermap = new HashMap<>();
-            usermap.put("Queue",counter);
+            usermap.put("Current Number",counter);
             root.setValue(usermap);
+
         }
     };
 
