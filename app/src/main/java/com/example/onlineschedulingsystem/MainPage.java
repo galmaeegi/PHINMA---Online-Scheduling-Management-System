@@ -21,15 +21,15 @@ public class MainPage extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        Button btn1 = (Button) findViewById(R.id.main_queue_btn);
+        ImageButton btn1 = (ImageButton) findViewById(R.id.main_queue_btn);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainPage.this, Login.class));
+                startActivity(new Intent(MainPage.this, StudentQueue.class));
             }
         });
 
-        Button btn2 = (Button) findViewById(R.id.main_schedule_btn);
+        ImageButton btn2 = (ImageButton) findViewById(R.id.main_schedule_btn);
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

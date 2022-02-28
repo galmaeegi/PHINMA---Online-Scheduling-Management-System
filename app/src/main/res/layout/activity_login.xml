@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".Login"
+    android:background="@drawable/bg4">
 
 
     <!--PHINMA - University of Pangasinan-->
@@ -36,63 +37,44 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/phinma3"
-        android:layout_width="388dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="13dp"
-        android:fontFamily="@font/poppins"
-        android:text="Welcome"
-        android:textAlignment="center"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phinma4" />
-
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="63dp"
-        android:layout_height="60dp"
+        android:layout_width="109dp"
+        android:layout_height="101dp"
         android:layout_marginStart="174dp"
-        android:layout_marginTop="17dp"
         android:layout_marginEnd="174dp"
-        android:layout_marginBottom="21dp"
-        app:layout_constraintBottom_toTopOf="@+id/googleSignInBtn"
+        android:layout_marginBottom="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/phinma"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phinma"
         app:srcCompat="@drawable/googlelogo" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/googleSignInBtn"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/phinma" />
 
     <TextView
         android:id="@+id/phinma"
         android:layout_width="271dp"
         android:layout_height="60dp"
         android:layout_marginStart="70dp"
+        android:layout_marginTop="168dp"
         android:layout_marginEnd="70dp"
         android:fontFamily="@font/poppins"
         android:lineSpacingExtra="-10sp"
         android:text="Sign in with your PHINMA Gmail Account"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phinma3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -101,28 +83,10 @@
         android:layout_marginStart="27dp"
         android:layout_marginTop="38dp"
         android:layout_marginEnd="26dp"
-        app:layout_constraintBottom_toTopOf="@+id/phinma4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/teamlogo" />
-
-    <TextView
-        android:id="@+id/phinma4"
-        android:layout_width="409dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="60dp"
-        android:fontFamily="@font/poppins"
-        android:lineSpacingExtra="-10sp"
-        android:text="ONLINE SCHEDULING MANAGEMENT SYSTEM"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/phinma3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:srcCompat="@drawable/logo" />
 
 
     <!--IMAGE: Sign in-->

@@ -4,53 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminSignIn">
+    tools:context=".AdminSignIn"
+    android:background="@drawable/bg4">
 
-
-    <ImageView
-        android:id="@+id/imageview7"
-        android:layout_width="415dp"
-        android:layout_height="210dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/banner_big" />
 
     <EditText
         android:id="@+id/admin_user"
         android:layout_width="283dp"
         android:layout_height="57dp"
-
-
-        android:layout_marginTop="112dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="64dp"
         android:background="@drawable/border_user"
         android:drawableStart="@drawable/ic_user"
         android:drawableLeft="@drawable/ic_user"
-
         android:drawablePadding="30dp"
         android:elevation="10dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
+        android:foregroundTint="#FFFFFF"
         android:hint="Admin ID"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:paddingLeft="15dp"
-        android:textColor="#000000"
-        android:textColorHint="#737373"
+        android:textColor="#FAF9F9"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/admin_password"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageview7" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/admin_password"
         android:layout_width="283dp"
         android:layout_height="58dp"
 
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
         android:background="@drawable/border_pass"
         android:drawableStart="@drawable/ic_password"
-
         android:drawableLeft="@drawable/ic_password"
         android:drawablePadding="30dp"
         android:elevation="10dp"
@@ -61,9 +54,9 @@
         android:minHeight="48dp"
         android:paddingLeft="15dp"
         android:textColor="#000000"
-        android:textColorHint="#737373"
-        app:layout_constraintBottom_toTopOf="@+id/admin_proceed"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/admin_user" />
 
@@ -72,48 +65,82 @@
         android:layout_width="245dp"
         android:layout_height="80dp"
         android:layout_marginStart="83dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="500dp"
         android:layout_marginEnd="83dp"
-        android:layout_marginBottom="176dp"
+        android:layout_marginBottom="83dp"
         android:background="#00F4F4F4"
         android:scaleType="center"
-        android:src="@drawable/proceed"
-        app:layout_constraintBottom_toBottomOf="@+id/credits6"
+        android:src="@drawable/proceed_button"
+        app:layout_constraintBottom_toTopOf="@+id/Credits2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/admin_password"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/Credits2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="146dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="44dp"
         android:fontFamily="@font/poppins"
         android:text="©2021 - B2G4 - All Rights Reserved."
         android:textColor="#BFBFBF"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/admin_proceed" />
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/credits6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="25dp"
         android:fontFamily="@font/poppins"
         android:text="PHINMA - University of Pangasinan"
         android:textColor="#BFBFBF"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Credits2"
+        app:layout_constraintVertical_bias="1.0" />
 
+    <ImageView
+        android:id="@+id/imageButton"
+        android:layout_width="356dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="49dp"
+        android:background="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="219dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="96dp"
+        android:fontFamily="@font/poppins"
+        android:text="Welcome Admin"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

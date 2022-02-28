@@ -17,46 +17,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/banner_big" />
 
-    <Button
-        android:id="@+id/main_queue_btn"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="76dp"
-
-        android:layout_marginTop="73dp"
-        android:background="@drawable/buttonshape"
-        android:backgroundTint="@color/colorPrimary"
-        android:shadowColor="#A8A8A8"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="5"
-        android:text="QUEUE"
-        android:textColor="#FFFFFF"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <Button
-        android:id="@+id/main_schedule_btn"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="73dp"
-        android:layout_marginEnd="82dp"
-        android:background="@drawable/buttonshape"
-        android:backgroundTint="#FFFFFF"
-        android:shadowColor="#A8A8A8"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="5"
-        android:text="SCHED"
-        android:textColor="#FFFFFF"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/main_queue_btn"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
     <ImageButton
         android:id="@+id/signout_button"
         android:layout_width="66dp"
@@ -100,20 +60,46 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/poppins"
-        android:text="Hello, student!"
-        android:textColor="#656565"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/main_schedule_btn"
+    <ImageButton
+        android:id="@+id/main_queue_btn"
+        android:layout_width="209dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="101dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/queuing"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/main_schedule_btn"
+        android:layout_width="209dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginEnd="101dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_queue_btn"
+        app:srcCompat="@drawable/scheduling"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="77dp"
+        android:layout_marginTop="164dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/welcomestudent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
