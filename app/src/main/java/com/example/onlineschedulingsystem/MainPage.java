@@ -37,22 +37,6 @@ public class MainPage extends AppCompatActivity {
             }
         });
 
-        Button btn3 = (Button) findViewById(R.id.main_changepass_btn);
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainPage.this, Login.class));
-            }
-        });
-
-        Button btn4 = (Button) findViewById(R.id.main_logout_btn);
-        btn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                firebaseAuth.signOut();
-                startActivity(new Intent(MainPage.this, Login.class));
-            }
-        });
 
         ImageButton smallSignOut = (ImageButton) findViewById(R.id.signout_button);
 

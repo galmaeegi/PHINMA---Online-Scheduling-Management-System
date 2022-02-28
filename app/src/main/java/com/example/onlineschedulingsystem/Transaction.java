@@ -34,7 +34,7 @@ public class Transaction extends AppCompatActivity{
 
     DatabaseReference MonReff, TueReff, WedReff, ThuReff, FriReff, SatReff;
 
-    long maxid = 0;
+    long m_maxid,t_maxid, w_maxid, th_maxid, f_maxid, s_maxid = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,12 +56,102 @@ public class Transaction extends AppCompatActivity{
         date_spinner = findViewById(R.id.date_spinner);
 
         /*Getting child instances*/
-        MonReff = FirebaseDatabase.getInstance().getReference() .child("Monday");
+        MonReff = FirebaseDatabase.getInstance().getReference().child("Monday");
         TueReff = FirebaseDatabase.getInstance().getReference() .child("Tuesday");
         WedReff = FirebaseDatabase.getInstance().getReference() .child("Wednesday");
         ThuReff = FirebaseDatabase.getInstance().getReference() .child("Thursday");
         FriReff = FirebaseDatabase.getInstance().getReference() .child("Friday");
         SatReff = FirebaseDatabase.getInstance().getReference() .child("Saturday");
+
+
+        /*Getting children count in Firebase*/
+        MonReff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot1) {
+                if(snapshot1.exists()) {
+                    m_maxid=(snapshot1.getChildrenCount());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        TueReff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot2) {
+                if(snapshot2.exists()) {
+                    t_maxid=(snapshot2.getChildrenCount());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        WedReff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot3) {
+                if(snapshot3.exists()) {
+                    w_maxid=(snapshot3.getChildrenCount());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        ThuReff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot4) {
+                if(snapshot4.exists()) {
+                    th_maxid=(snapshot4.getChildrenCount());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        FriReff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot5) {
+                if(snapshot5.exists()) {
+                    f_maxid=(snapshot5.getChildrenCount());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        SatReff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot6) {
+                if(snapshot6.exists()) {
+                    s_maxid=(snapshot6.getChildrenCount());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+
 
 
 
@@ -161,90 +251,38 @@ public class Transaction extends AppCompatActivity{
 
                     insertDataMon();
                     //Sending data to Overview.class
-                    Intent intent = new Intent(Transaction.this,Overview.class);
-                    valueFromStudent = student_no.getText().toString();
-                    intent.putExtra("studentKey",valueFromStudent);
-                    intent.putExtra("departmentKey",valueFromDept);
-                    intent.putExtra("purposeKey",valueFromPurpose);
-                    intent.putExtra("dateKey",valueFromDate);
-                    intent.putExtra("queueKey",valueFromQueue);
-                    startActivity(intent);
+                    SendDataOverview();
 
                 }
 
                 else if (temp=="Tuesday") {
                     insertDataTue();
-
-
                     //Sending data to Overview.class
-                    Intent intent = new Intent(Transaction.this,Overview.class);
-                    valueFromStudent = student_no.getText().toString();
-                    intent.putExtra("studentKey",valueFromStudent);
-                    intent.putExtra("departmentKey",valueFromDept);
-                    intent.putExtra("purposeKey",valueFromPurpose);
-                    intent.putExtra("dateKey",valueFromDate);
-                    intent.putExtra("queueKey",valueFromQueue);
-                    startActivity(intent);
+                    SendDataOverview();
 
                 }
                 else if (temp=="Wednesday") {
                     insertDataWed();
-
-
                     //Sending data to Overview.class
-                    Intent intent = new Intent(Transaction.this,Overview.class);
-                    valueFromStudent = student_no.getText().toString();
-                    intent.putExtra("studentKey",valueFromStudent);
-                    intent.putExtra("departmentKey",valueFromDept);
-                    intent.putExtra("purposeKey",valueFromPurpose);
-                    intent.putExtra("dateKey",valueFromDate);
-                    intent.putExtra("queueKey",valueFromQueue);
-                    startActivity(intent);
+                    SendDataOverview();
+
 
                 }
                 else if (temp=="Thursday") {
                     insertDataThu();
-
-
                     //Sending data to Overview.class
-                    Intent intent = new Intent(Transaction.this,Overview.class);
-                    valueFromStudent = student_no.getText().toString();
-                    intent.putExtra("studentKey",valueFromStudent);
-                    intent.putExtra("departmentKey",valueFromDept);
-                    intent.putExtra("purposeKey",valueFromPurpose);
-                    intent.putExtra("dateKey",valueFromDate);
-                    intent.putExtra("queueKey",valueFromQueue);
-                    startActivity(intent);
-
+                    SendDataOverview();
                 }
                 else if (temp=="Friday") {
                     insertDataFri();
-
-
                     //Sending data to Overview.class
-                    Intent intent = new Intent(Transaction.this,Overview.class);
-                    valueFromStudent = student_no.getText().toString();
-                    intent.putExtra("studentKey",valueFromStudent);
-                    intent.putExtra("departmentKey",valueFromDept);
-                    intent.putExtra("purposeKey",valueFromPurpose);
-                    intent.putExtra("dateKey",valueFromDate);
-                    intent.putExtra("queueKey",valueFromQueue);
-                    startActivity(intent);
+                    SendDataOverview();
 
                 }
                 else if (temp=="Saturday") {
                     insertDataSat();
-
-
                     //Sending data to Overview.class
-                    Intent intent = new Intent(Transaction.this,Overview.class);
-                    valueFromStudent = student_no.getText().toString();
-                    intent.putExtra("studentKey",valueFromStudent);
-                    intent.putExtra("departmentKey",valueFromDept);
-                    intent.putExtra("purposeKey",valueFromPurpose);
-                    intent.putExtra("dateKey",valueFromDate);
-                    intent.putExtra("queueKey",valueFromQueue);
-                    startActivity(intent);
+                    SendDataOverview();
 
                 }
 
@@ -273,9 +311,8 @@ public class Transaction extends AppCompatActivity{
         String purpose_ = purpose_spinner.getSelectedItem().toString();
 
         Monday monday = new Monday(student_,department_,purpose_);
+        MonReff.child(String.valueOf(m_maxid+1)).setValue((monday));
 
-
-        MonReff.push().setValue(monday);
 
     }
 
@@ -289,9 +326,7 @@ public class Transaction extends AppCompatActivity{
         String purpose_ = purpose_spinner.getSelectedItem().toString();
 
         Monday monday = new Monday(student_,department_,purpose_);
-
-
-        TueReff.push().setValue(monday);
+        TueReff.child(String.valueOf(t_maxid+1)).setValue((monday));
 
     }
 
@@ -307,7 +342,7 @@ public class Transaction extends AppCompatActivity{
         Monday monday = new Monday(student_,department_,purpose_);
 
 
-        WedReff.push().setValue(monday);
+        WedReff.child(String.valueOf(w_maxid+1)).setValue((monday));
 
     }
 
@@ -323,7 +358,7 @@ public class Transaction extends AppCompatActivity{
         Monday monday = new Monday(student_,department_,purpose_);
 
 
-        ThuReff.push().setValue(monday);
+        ThuReff.child(String.valueOf(th_maxid+1)).setValue((monday));
 
     }
 
@@ -339,7 +374,7 @@ public class Transaction extends AppCompatActivity{
         Monday monday = new Monday(student_,department_,purpose_);
 
 
-        FriReff.push().setValue(monday);
+        FriReff.child(String.valueOf(f_maxid+1)).setValue((monday));
 
     }
 
@@ -355,8 +390,21 @@ public class Transaction extends AppCompatActivity{
         Monday monday = new Monday(student_,department_,purpose_);
 
 
-        SatReff.push().setValue(monday);
+        SatReff.child(String.valueOf(s_maxid+1)).setValue((monday));
 
+
+    }
+
+    private void SendDataOverview() {
+        //Sending data to Overview.class
+        Intent intent = new Intent(Transaction.this,Overview.class);
+        valueFromStudent = student_no.getText().toString();
+        intent.putExtra("studentKey",valueFromStudent);
+        intent.putExtra("departmentKey",valueFromDept);
+        intent.putExtra("purposeKey",valueFromPurpose);
+        intent.putExtra("dateKey",valueFromDate);
+        intent.putExtra("queueKey",valueFromQueue);
+        startActivity(intent);
     }
 
 }
