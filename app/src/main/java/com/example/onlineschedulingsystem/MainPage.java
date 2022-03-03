@@ -42,6 +42,7 @@ public class MainPage extends AppCompatActivity {
 
         smallSignOut.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(MainPage.this,Login.class));
 
             }

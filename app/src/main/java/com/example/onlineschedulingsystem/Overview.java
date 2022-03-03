@@ -3,10 +3,16 @@ package com.example.onlineschedulingsystem;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class Overview extends AppCompatActivity {
 
@@ -16,6 +22,19 @@ public class Overview extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_overview);
+
+
+        /*Please TAKE A SCREENSHOT*/
+        TextView textView = findViewById(R.id.take);
+        String text = "Please TAKE A SCREENSHOT as this will become your valid receipt for verification.";
+
+        SpannableString ss = new SpannableString(text);
+
+        ForegroundColorSpan fcsRed = new ForegroundColorSpan(Color.RED);
+
+        ss.setSpan(fcsRed, 7, 24, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        textView.setText(ss);
 
         TextView studentDisplay = findViewById(R.id.studentno_text_view);
         TextView departmentDisplay = findViewById(R.id.department_text_view);
