@@ -10,7 +10,7 @@
 
     <EditText
         android:id="@+id/admin_user"
-        android:layout_width="283dp"
+        android:layout_width="wrap_content"
         android:layout_height="57dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="48dp"
@@ -31,13 +31,12 @@
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/admin_password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/admin_password"
-        android:layout_width="283dp"
+        android:layout_width="wrap_content"
         android:layout_height="58dp"
 
         android:layout_marginStart="64dp"
@@ -56,13 +55,12 @@
         android:textColor="#000000"
         android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/admin_user" />
 
     <ImageButton
         android:id="@+id/admin_proceed"
-        android:layout_width="245dp"
+        android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:layout_marginStart="83dp"
         android:layout_marginTop="500dp"
@@ -73,9 +71,10 @@
         android:src="@drawable/proceed_button"
         app:layout_constraintBottom_toTopOf="@+id/Credits2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
