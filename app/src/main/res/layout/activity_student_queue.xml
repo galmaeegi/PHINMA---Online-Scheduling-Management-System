@@ -18,11 +18,11 @@
 
     <TextView
         android:id="@+id/CurrentQueue"
-        android:layout_width="182dp"
+        android:layout_width="wrap_content"
         android:layout_height="36dp"
         android:layout_marginStart="110dp"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="119dp"
+        android:layout_marginEnd="110dp"
         android:fontFamily="@font/poppins"
         android:text="Current Queue"
         android:textSize="24dp"
@@ -35,8 +35,8 @@
 
     <TextView
         android:id="@+id/StudentCounter"
-        android:layout_width="137dp"
-        android:layout_height="166dp"
+        android:layout_width="342dp"
+        android:layout_height="159dp"
         android:layout_marginStart="137dp"
         android:layout_marginTop="59dp"
         android:layout_marginEnd="137dp"
@@ -46,9 +46,10 @@
         android:textSize="120sp"
         app:layout_constraintBottom_toTopOf="@+id/credits7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CurrentQueue" />
+        app:layout_constraintTop_toBottomOf="@+id/CurrentQueue"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/credits7"
