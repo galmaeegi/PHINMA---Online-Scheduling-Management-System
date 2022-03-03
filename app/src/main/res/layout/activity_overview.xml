@@ -39,11 +39,11 @@
         android:layout_height="210dp"
 
 
+        android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toTopOf="@+id/lbl_success2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/banner_big" />
 
     <TextView
@@ -68,13 +68,13 @@
         android:id="@+id/lbl_studentno_r2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
         android:fontFamily="@font/poppins"
         android:text="Student No:"
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/studentno_text_view"
         app:layout_constraintTop_toBottomOf="@+id/lbl_success2" />
 
     <TextView
@@ -98,22 +98,19 @@
         android:id="@+id/lbl_department_r2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
         android:layout_marginTop="2dp"
-        android:layout_marginEnd="77dp"
+        android:layout_marginEnd="76dp"
         android:fontFamily="@font/poppins"
         android:text="Department:"
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/department_text_view"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/purpose_text_view"
         app:layout_constraintTop_toBottomOf="@+id/lbl_studentno_r2" />
 
     <TextView
         android:id="@+id/department_text_view"
-        android:layout_width="97dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="256dp"
+        android:layout_width="65dp"
+        android:layout_height="31dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="58dp"
         android:fontFamily="@font/poppins"
@@ -122,29 +119,25 @@
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentno_text_view" />
 
     <TextView
         android:id="@+id/lbl_purpose_r2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
         android:layout_marginTop="1dp"
-        android:layout_marginEnd="62dp"
+        android:layout_marginEnd="118dp"
         android:fontFamily="@font/poppins"
         android:text="Purpose:"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/purpose_text_view"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl_department_r2" />
 
     <TextView
         android:id="@+id/purpose_text_view"
-        android:layout_width="150dp"
-        android:layout_height="32dp"
+        android:layout_width="96dp"
+        android:layout_height="33dp"
         android:layout_marginEnd="59dp"
         android:fontFamily="@font/poppins"
         android:text="Purpose"
@@ -158,15 +151,13 @@
         android:id="@+id/lbl_date_r2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="159dp"
+        android:layout_marginEnd="160dp"
         android:fontFamily="@font/poppins"
         android:text="Day:"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/date_text_view"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl_purpose_r2" />
 
     <TextView
@@ -187,23 +178,20 @@
         android:id="@+id/lbl_time_r2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="130dp"
+        android:layout_marginEnd="111dp"
         android:fontFamily="@font/poppins"
         android:text="Queue: "
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/queue_text_view"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl_date_r2" />
 
     <TextView
         android:id="@+id/queue_text_view"
         android:layout_width="115dp"
         android:layout_height="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="56dp"
         android:fontFamily="@font/poppins"
         android:text="1"
