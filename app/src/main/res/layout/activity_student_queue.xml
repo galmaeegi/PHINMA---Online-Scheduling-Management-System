@@ -35,7 +35,7 @@
 
     <TextView
         android:id="@+id/StudentCounter"
-        android:layout_width="342dp"
+        android:layout_width="340dp"
         android:layout_height="159dp"
         android:layout_marginStart="137dp"
         android:layout_marginTop="59dp"
