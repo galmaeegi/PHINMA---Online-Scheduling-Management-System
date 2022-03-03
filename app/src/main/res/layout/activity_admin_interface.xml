@@ -47,40 +47,42 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/banner_big" />
 
-    <Button
+    <ImageButton
         android:id="@+id/Load"
-        android:layout_width="190dp"
-        android:layout_height="66dp"
+        android:layout_width="232dp"
+        android:layout_height="78dp"
         android:layout_marginStart="110dp"
-        android:layout_marginTop="43dp"
-        android:layout_marginEnd="111dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="128dp"
+        android:background="@drawable/next"
         android:fontFamily="@font/poppins"
         android:text="Next"
-        app:layout_constraintBottom_toTopOf="@+id/Rest"
+        app:layout_constraintBottom_toTopOf="@+id/credits7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
+    <ImageButton
         android:id="@+id/Rest"
-        android:layout_width="187dp"
-        android:layout_height="64dp"
+        android:layout_width="232dp"
+        android:layout_height="78dp"
         android:layout_marginStart="110dp"
-        android:layout_marginEnd="114dp"
-        android:layout_marginBottom="41dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/reset"
         android:fontFamily="@font/poppins"
         android:text="Rest"
         app:layout_constraintBottom_toTopOf="@+id/credits7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.949" />
+        app:layout_constraintTop_toBottomOf="@+id/Load" />
 
     <TextView
         android:id="@+id/countertxt"
-        android:layout_width="223dp"
+        android:layout_width="wrap_content"
         android:layout_height="165dp"
         android:layout_marginStart="93dp"
         android:layout_marginTop="15dp"
@@ -91,21 +93,24 @@
         android:textSize="120sp"
         app:layout_constraintBottom_toTopOf="@+id/Load"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CurrentQueue" />
+        app:layout_constraintTop_toBottomOf="@+id/CurrentQueue"
+        app:layout_constraintVertical_bias="0.6" />
 
     <TextView
         android:id="@+id/CurrentQueue"
-        android:layout_width="182dp"
+        android:layout_width="wrap_content"
         android:layout_height="36dp"
         android:layout_marginStart="110dp"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="119dp"
+        android:layout_marginEnd="110dp"
         android:fontFamily="@font/poppins"
         android:text="Current Queue"
+        android:textAlignment="center"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
