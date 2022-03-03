@@ -52,7 +52,7 @@
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:paddingLeft="15dp"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
