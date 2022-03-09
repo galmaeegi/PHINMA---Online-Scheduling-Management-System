@@ -21,14 +21,6 @@ public class MainPage extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        ImageButton btn1 = (ImageButton) findViewById(R.id.main_queue_btn);
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainPage.this, StudentQueue.class));
-            }
-        });
-
         ImageButton btn2 = (ImageButton) findViewById(R.id.main_schedule_btn);
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override

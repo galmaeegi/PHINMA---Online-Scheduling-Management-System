@@ -64,7 +64,7 @@ public class Overview extends AppCompatActivity {
         snoutReview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Overview.this,Login.class));
+                startActivity(new Intent(Overview.this,WelcomeBack.class));
             }
         });
 

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 
 import android.widget.AdapterView;
@@ -14,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -31,6 +33,8 @@ public class Transaction extends AppCompatActivity{
     String valueFromStudent, valueFromDept, valueFromPurpose, valueFromDate;
     String temp;
     String valueFromQueue;
+    Boolean hasChange;
+    Boolean m_check, t_check, w_check, th_check, f_check, s_check;
 
     DatabaseReference MonReff, TueReff, WedReff, ThuReff, FriReff, SatReff;
 
@@ -62,6 +66,15 @@ public class Transaction extends AppCompatActivity{
         ThuReff = FirebaseDatabase.getInstance().getReference() .child("Thursday");
         FriReff = FirebaseDatabase.getInstance().getReference() .child("Friday");
         SatReff = FirebaseDatabase.getInstance().getReference() .child("Saturday");
+
+
+        /*Checking slots if full or not*/
+        mondayCheck();
+        tuesdayCheck();
+        wednesdayCheck();
+        thursdayCheck();
+        fridayCheck();
+        saturdayCheck();
 
 
         /*Getting children count in Firebase*/
@@ -214,22 +227,63 @@ public class Transaction extends AppCompatActivity{
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 valueFromDate = parent.getItemAtPosition(position).toString();
                 if (valueFromDate.equals("Monday")) {
-                    temp = "Monday";
+                    if (!mondayCheck()){
+                        Toast toast =Toast.makeText(Transaction.this, "         MONDAY is FULL! \n Please choose another day!",Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
+                    } else {
+                        temp = "Monday";
+                    }
+                }
 
-                } else if (valueFromDate.equals("Tuesday")) {
-                    temp = "Tuesday";
+                else if (valueFromDate.equals("Tuesday")) {
+                    if (!tuesdayCheck()){
+                        Toast toast =Toast.makeText(Transaction.this, "         Tuesday is FULL! \n Please choose another day!",Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
+                    } else {
+                        temp = "Tuesday";
+                    }
 
-                } else if (valueFromDate.equals("Wednesday")) {
-                    temp = "Wednesday";
+                }
 
-                } else if (valueFromDate.equals("Thursday")) {
-                    temp = "Thursday";
+                else if (valueFromDate.equals("Wednesday")) {
+                    if (!wednesdayCheck()){
+                        Toast toast =Toast.makeText(Transaction.this, "         Wednesday is FULL! \n Please choose another day!",Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
+                    } else {
+                        temp = "Wednesday";
+                    }
+
+                }
+
+                else if (valueFromDate.equals("Thursday")) {
+                    if (!thursdayCheck()){
+                        Toast toast =Toast.makeText(Transaction.this, "         Thursday is FULL! \n Please choose another day!",Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
+                    } else {
+                        temp = "Thursday";
+                    }
 
                 } else if (valueFromDate.equals("Friday")) {
-                    temp = "Friday";
+                    if (!fridayCheck()){
+                        Toast toast =Toast.makeText(Transaction.this, "         Friday is FULL! \n Please choose another day!",Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
+                    } else {
+                        temp = "Friday";
+                    }
 
                 } else if (valueFromDate.equals("Saturday")) {
-                    temp = "Saturday";
+                    if (!saturdayCheck()){
+                        Toast toast =Toast.makeText(Transaction.this, "         Saturday is FULL! \n Please choose another day!",Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER, 0, 0);
+                        toast.show();
+                    } else {
+                        temp = "Saturday";
+                    }
 
                 }
 
@@ -305,6 +359,7 @@ public class Transaction extends AppCompatActivity{
     private void insertDataMon() {
 
 
+        valueFromQueue = String.valueOf(m_maxid+1);
         /*Sending Data to Firebase*/
         String student_ =  student_no.getText().toString();
         String department_ = dept_spinner.getSelectedItem().toString();
@@ -319,7 +374,7 @@ public class Transaction extends AppCompatActivity{
     /*Insertion Method (TUESDAY)*/
     private void insertDataTue() {
 
-
+        valueFromQueue = String.valueOf(t_maxid+1);
         /*Sending Data to Firebase*/
         String student_ =  student_no.getText().toString();
         String department_ = dept_spinner.getSelectedItem().toString();
@@ -333,8 +388,9 @@ public class Transaction extends AppCompatActivity{
     /*Insertion Method (WEDNESDAY)*/
     private void insertDataWed() {
 
-
+        valueFromQueue = String.valueOf(w_maxid+1);
         /*Sending Data to Firebase*/
+
         String student_ =  student_no.getText().toString();
         String department_ = dept_spinner.getSelectedItem().toString();
         String purpose_ = purpose_spinner.getSelectedItem().toString();
@@ -349,7 +405,7 @@ public class Transaction extends AppCompatActivity{
     /*Insertion Method (THURSDAY)*/
     private void insertDataThu() {
 
-
+        valueFromQueue = String.valueOf(th_maxid+1);
         /*Sending Data to Firebase*/
         String student_ =  student_no.getText().toString();
         String department_ = dept_spinner.getSelectedItem().toString();
@@ -365,7 +421,7 @@ public class Transaction extends AppCompatActivity{
     /*Insertion Method (FRIDAY)*/
     private void insertDataFri() {
 
-
+        valueFromQueue = String.valueOf(f_maxid+1);
         /*Sending Data to Firebase*/
         String student_ =  student_no.getText().toString();
         String department_ = dept_spinner.getSelectedItem().toString();
@@ -381,7 +437,7 @@ public class Transaction extends AppCompatActivity{
     /*Insertion Method (SATURDAY)*/
     private void insertDataSat() {
 
-
+        valueFromQueue = String.valueOf(s_maxid+1);
         /*Sending Data to Firebase*/
         String student_ =  student_no.getText().toString();
         String department_ = dept_spinner.getSelectedItem().toString();
@@ -394,8 +450,9 @@ public class Transaction extends AppCompatActivity{
 
 
     }
-
+    //Sending data to Overview.class
     private void SendDataOverview() {
+        isTransact();
         //Sending data to Overview.class
         Intent intent = new Intent(Transaction.this,Overview.class);
         valueFromStudent = student_no.getText().toString();
@@ -405,6 +462,77 @@ public class Transaction extends AppCompatActivity{
         intent.putExtra("dateKey",valueFromDate);
         intent.putExtra("queueKey",valueFromQueue);
         startActivity(intent);
+    }
+    /*To check if the student has transacted already*/
+    public boolean isTransact() {
+        hasChange = true;
+        return hasChange;
+    }
+    /*Reset Button for student to transact again.*/
+    public boolean isReset() {
+        hasChange = false;
+        return hasChange;
+
+    }
+
+    /*Checking if the day is full*/
+    public boolean mondayCheck() {
+        if (m_maxid == 5) {
+            m_check = false;
+        } else {
+            m_check = true;
+        }
+        return m_check;
+    }
+
+    /*Checking if the day is full*/
+    public boolean tuesdayCheck() {
+        if (t_maxid == 5) {
+            t_check = false;
+        } else {
+            t_check = true;
+        }
+        return t_check;
+    }
+
+    /*Checking if the day is full*/
+    public boolean wednesdayCheck() {
+        if (w_maxid == 5) {
+            w_check = false;
+        } else {
+            w_check = true;
+        }
+        return w_check;
+    }
+
+    /*Checking if the day is full*/
+    public boolean thursdayCheck() {
+        if (th_maxid == 5) {
+            th_check = false;
+        } else {
+            th_check = true;
+        }
+        return th_check;
+    }
+
+    /*Checking if the day is full*/
+    public boolean fridayCheck() {
+        if (f_maxid == 5) {
+            f_check = false;
+        } else {
+            f_check = true;
+        }
+        return f_check;
+    }
+
+    /*Checking if the day is full*/
+    public boolean saturdayCheck() {
+        if (s_maxid == 5) {
+            s_check = false;
+        } else {
+            s_check = true;
+        }
+        return s_check;
     }
 
 }

@@ -85,7 +85,7 @@ public class AdminInterface extends AppCompatActivity {
         smallSignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AdminInterface.this, Login.class));
+                startActivity(new Intent(AdminInterface.this, WelcomeBack.class));
             }
         });
 

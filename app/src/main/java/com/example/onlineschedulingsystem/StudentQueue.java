@@ -2,6 +2,8 @@ package com.example.onlineschedulingsystem;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +31,7 @@ import java.util.Map;
 public class StudentQueue extends AppCompatActivity {
 
     TextView textView;
+    Button button;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
@@ -38,6 +41,7 @@ public class StudentQueue extends AppCompatActivity {
         setContentView(R.layout.activity_student_queue);
 
         textView = findViewById(R.id.StudentCounter);
+        button = findViewById(R.id.reset);
         firebaseDatabase = FirebaseDatabase.getInstance();
         ///Getting Child Data///
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("QUEUE");
@@ -52,6 +56,14 @@ public class StudentQueue extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Transaction().isReset();
+                startActivity(new Intent(StudentQueue.this, MainPage.class));
             }
         });
 
