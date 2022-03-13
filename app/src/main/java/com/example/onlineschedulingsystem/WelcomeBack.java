@@ -16,6 +16,15 @@ public class WelcomeBack extends AppCompatActivity {
         setContentView(R.layout.activity_welcome_back);
 
         ImageButton auth_btn_student = (ImageButton) findViewById(R.id.welcome_button);
+        ImageButton btntest = (ImageButton) findViewById(R.id.test);
+
+        btntest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(WelcomeBack.this, AdminInterface3.class));
+            }
+        });
+
         auth_btn_student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminInterface">
-
+    tools:context=".AdminInterface3">
 
     <TextView
         android:id="@+id/textViewTeller2"
@@ -61,7 +60,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/teller_one" />
+        app:srcCompat="@drawable/teller3" />
 
     <ImageButton
         android:id="@+id/next"
@@ -217,6 +216,5 @@
         app:layout_constraintStart_toEndOf="@+id/t2"
         app:layout_constraintTop_toBottomOf="@+id/textViewTeller3"
         app:layout_constraintVertical_bias="0.045" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
