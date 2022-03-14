@@ -36,8 +36,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="335dp"
-        android:layout_height="300dp"
+        android:layout_width="279dp"
+        android:layout_height="191dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,43 +48,42 @@
 
     <TextView
         android:id="@+id/CurrentQueue"
-        android:layout_width="232dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="158dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
         android:fontFamily="@font/poppins"
-        android:lineSpacingExtra="-10sp"
+        android:lineSpacingExtra="-2sp"
         android:text="NOW SERVING CLIENT NUMBER:"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/queuingheader1" />
 
     <TextView
         android:id="@+id/StudentCounter"
-        android:layout_width="212dp"
-        android:layout_height="137dp"
+        android:layout_width="139dp"
+        android:layout_height="91dp"
         android:layout_marginTop="8dp"
         android:text="0"
         android:textAlignment="center"
-        android:textSize="120sp"
+        android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CurrentQueue"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.156" />
 
     <TextView
         android:id="@+id/unable"
         android:layout_width="295dp"
         android:layout_height="80dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="4dp"
         android:text="You have to be in the venue 5 mintues before your number is to be called. If you fail to show up after the timer expires, your queue number will be automatically voided."
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/unable2" />
 
@@ -92,12 +91,12 @@
         android:id="@+id/unable2"
         android:layout_width="235dp"
         android:layout_height="21dp"
+        android:layout_marginTop="150dp"
         android:text="DISCLAIMER:"
         android:textAlignment="center"
         android:textColor="#FF0000"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -112,7 +111,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/unable"
-        app:layout_constraintVertical_bias="0.323" />
+        app:layout_constraintVertical_bias="0.222" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
