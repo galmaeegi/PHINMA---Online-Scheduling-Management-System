@@ -8,17 +8,18 @@
 
     <TextView
         android:id="@+id/textViewTeller2"
-        android:layout_width="102dp"
+        android:layout_width="108dp"
         android:layout_height="33dp"
-        android:layout_marginEnd="144dp"
         android:fontFamily="@font/poppins"
         android:text="TELLER 2"
         android:textAlignment="center"
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="@+id/credits8"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.638" />
+        app:layout_constraintVertical_bias="0.685" />
 
     <TextView
         android:id="@+id/credits8"
@@ -52,14 +53,14 @@
         app:layout_constraintVertical_bias="0.993" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="453dp"
-        android:layout_height="221dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/queuingheader1"
+        android:layout_width="602dp"
+        android:layout_height="252dp"
+        android:layout_marginTop="-20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/teller3" />
 
     <ImageButton
@@ -93,20 +94,30 @@
         app:layout_constraintVertical_bias="0.907"
         tools:ignore="SpeakableTextPresentCheck" />
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="305dp"
+        android:layout_height="281dp"
+        android:background="@drawable/big_box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.431" />
+
     <TextView
         android:id="@+id/countertxt"
-        android:layout_width="338dp"
-        android:layout_height="153dp"
-        android:background="@drawable/big_box"
+        android:layout_width="243dp"
+        android:layout_height="136dp"
         android:text="25"
         android:textAlignment="center"
         android:textSize="96sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.434" />
+        app:layout_constraintVertical_bias="0.46" />
 
     <TextView
         android:id="@+id/TextViewNext"
@@ -118,9 +129,10 @@
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.306" />
+        app:layout_constraintVertical_bias="0.354" />
 
     <ImageButton
         android:id="@+id/signout_button"
@@ -138,83 +150,77 @@
 
     <TextView
         android:id="@+id/t2"
-        android:layout_width="102dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="22dp"
+        android:layout_width="122dp"
+        android:layout_height="76dp"
         android:background="@drawable/small_box"
         android:text="25"
         android:textAlignment="center"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTeller2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.77" />
 
     <TextView
         android:id="@+id/t1"
-        android:layout_width="109dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="122dp"
+        android:layout_height="76dp"
         android:background="@drawable/small_box"
         android:text="25"
         android:textAlignment="center"
-        android:textSize="48sp"
+        android:textSize="46sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/t2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.736" />
+        app:layout_constraintVertical_bias="0.77" />
 
     <TextView
         android:id="@+id/TextViewTeller1"
-        android:layout_width="102dp"
+        android:layout_width="108dp"
         android:layout_height="33dp"
-        android:layout_marginStart="25dp"
         android:fontFamily="@font/poppins"
         android:text="TELLER 1"
         android:textAlignment="center"
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.624" />
+        app:layout_constraintVertical_bias="0.671" />
 
     <TextView
         android:id="@+id/textViewTeller3"
-        android:layout_width="102dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="25dp"
+        android:layout_width="108dp"
+        android:layout_height="34dp"
         android:fontFamily="@font/poppins"
         android:text="TELLER 3"
         android:textAlignment="center"
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.624" />
+        app:layout_constraintVertical_bias="0.671" />
 
     <TextView
         android:id="@+id/t3"
-        android:layout_width="102dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="68dp"
+        android:layout_width="122dp"
+        android:layout_height="76dp"
         android:background="@drawable/small_box"
         android:text="25"
         android:textAlignment="center"
         android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@+id/Rest"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/t2"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTeller3"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.77" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
