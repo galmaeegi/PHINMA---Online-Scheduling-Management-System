@@ -6,25 +6,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
-import java.util.Map;
 
-public class AdminInterface extends AppCompatActivity {
+public class AdminInterface3 extends AppCompatActivity {
 
     private ImageButton Next;
     private ImageButton Rest;
@@ -38,7 +31,7 @@ public class AdminInterface extends AppCompatActivity {
 
 
     private FirebaseDatabase dbTeller = FirebaseDatabase.getInstance();
-    private DatabaseReference tellerOne = dbTeller.getReference();
+    private DatabaseReference tellerThree = dbTeller.getReference();
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
@@ -62,25 +55,27 @@ public class AdminInterface extends AppCompatActivity {
             motherqueue.setValue(usermap);
 
             ///CREATING TELLER ONE CHILD///
-            String telone = counterTxt.getText().toString();
-            tellerOne = FirebaseDatabase.getInstance().getReference().child("TELLER ONE");
+            String telthree = counterTxt.getText().toString();
+            tellerThree = FirebaseDatabase.getInstance().getReference().child("TELLER THREE");
             ///CREATING TELLER ONE CHILDREN///
             HashMap<String, String> tellerMap = new HashMap<>();
-            tellerMap.put("NUMBER", telone);
-            tellerOne.setValue(tellerMap);
+            tellerMap.put("NUMBER", telthree);
+            tellerThree.setValue(tellerMap);
         }
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_interface);
+        setContentView(R.layout.activity_admin_interface2);
 
+        ///Child Data Variables///
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("QUEUE");
         DatabaseReference TellerOnereference = FirebaseDatabase.getInstance().getReference().child("TELLER ONE");
         DatabaseReference TellerTworeference = FirebaseDatabase.getInstance().getReference().child("TELLER TWO");
         DatabaseReference TellerThreereference = FirebaseDatabase.getInstance().getReference().child("TELLER THREE");
 
-        ///GETTING MOTHER DATA///
+        ///GETTING MODER QUEUE DAT///
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             ///Setting data in TextView///
@@ -94,6 +89,7 @@ public class AdminInterface extends AppCompatActivity {
 
             }
         });
+
         ///GETTING TELLER ONE DATA///
         TellerOnereference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -107,7 +103,8 @@ public class AdminInterface extends AppCompatActivity {
 
             }
         });
-        /// GETTING TELLER TWO DATA///
+
+        ///Getting TellerTwo DATA///
         TellerTworeference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -120,7 +117,8 @@ public class AdminInterface extends AppCompatActivity {
 
             }
         });
-        /// GETTING TELLER THREE DATA///
+
+        ///GETTING TELLER THREE DATA///
         TellerThreereference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -133,13 +131,11 @@ public class AdminInterface extends AppCompatActivity {
 
             }
         });
-
-        ///SIGNOUT BUTTON///
         ImageButton smallSignOut = (ImageButton) findViewById(R.id.signout_button);
         smallSignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AdminInterface.this, WelcomeBack.class));
+                startActivity(new Intent(AdminInterface3.this, WelcomeBack.class));
             }
         });
         T1Text = (TextView) findViewById(R.id.t1);
@@ -151,7 +147,6 @@ public class AdminInterface extends AppCompatActivity {
         Rest = (ImageButton) findViewById(R.id.Rest);
         Rest.setOnClickListener(clickListener);
         resetCounter();
-
     }
 
     private void resetCounter() {

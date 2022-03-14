@@ -7,11 +7,16 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
+<Admin_interface_1_2_3
+            <value value="C:\Users\Daitooooo\.android\avd\Phone_1.avd" />
             <value value="C:\Users\Rowi\.android\avd\Pixel_3a_API_30_1.avd" />
           </Key>
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
+<Admin_interface_1_2_3
+    <timeTargetWasSelectedWithDropDown value="2022-03-10T17:20:57.464601Z" />
+    <multipleDevicesSelectedInDropDown value="true" />
     <timeTargetWasSelectedWithDropDown value="2022-03-10T06:51:25.982512Z" />
     <targetsSelectedWithDialog>
       <Target>
@@ -19,7 +24,25 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\Daitooooo\.android\avd\Pixel_API_20.avd" />
+            <value value="C:\Users\Daitooooo\.android\avd\Pixel_3a_API_30.avd" />
+          </Key>
+        </deviceKey>
+      </Target>
+      <Target>
+        <type value="QUICK_BOOT_TARGET" />
+        <deviceKey>
+          <Key>
+            <type value="VIRTUAL_DEVICE_PATH" />
+            <value value="C:\Users\Daitooooo\.android\avd\Phone_1.avd" />
+          </Key>
+        </deviceKey>
+      </Target>
+      <Target>
+        <type value="QUICK_BOOT_TARGET" />
+        <deviceKey>
+          <Key>
+            <type value="VIRTUAL_DEVICE_PATH" />
+            <value value="C:\Users\Daitooooo\.android\avd\Phone_3.avd" />
           </Key>
         </deviceKey>
       </Target>

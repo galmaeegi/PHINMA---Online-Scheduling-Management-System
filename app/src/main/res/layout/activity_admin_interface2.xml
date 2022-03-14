@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminInterface">
-
+    tools:context=".AdminInterface2">
 
     <TextView
         android:id="@+id/textViewTeller2"
@@ -49,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/queuingheader"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.993" />
 
     <ImageView
@@ -57,14 +56,11 @@
         android:layout_width="453dp"
         android:layout_height="221dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:id="@+id/queuingheader"
-        android:layout_width="415dp"
-        android:layout_height="210dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/teller_one" />
+        app:srcCompat="@drawable/teller2" />
 
     <ImageButton
         android:id="@+id/next"
@@ -125,7 +121,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.306" />
-        app:layout_constraintTop_toBottomOf="@+id/queuingheader" />
 
     <ImageButton
         android:id="@+id/signout_button"

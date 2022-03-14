@@ -33,6 +33,10 @@
         app:srcCompat="@drawable/queuing_plate" />
 
     <TextView
+        android:id="@+id/TextViewNext"
+        android:layout_width="352dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="52dp"
         android:id="@+id/CurrentQueue"
         android:layout_width="289dp"
         android:layout_height="70dp"
@@ -110,6 +114,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewNext" />
         app:layout_constraintTop_toBottomOf="@+id/StudentCounter" />
 
     <Button

@@ -43,11 +43,13 @@ public class StudentQueue extends AppCompatActivity {
         textView = findViewById(R.id.StudentCounter);
         button = findViewById(R.id.reset);
         firebaseDatabase = FirebaseDatabase.getInstance();
+
         ///Getting Child Data///
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("QUEUE");
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
+
             ///Setting data in TextView///
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
             String data = dataSnapshot.child("Current Number").getValue().toString();
