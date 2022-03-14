@@ -52,7 +52,7 @@ public class StudentQueue extends AppCompatActivity {
 
             ///Setting data in TextView///
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-            String data = dataSnapshot.child("Current Number").getValue().toString();
+            String data = dataSnapshot.child("CURRENT NUMBER").getValue().toString();
             textView.setText(data);
             }
             @Override
