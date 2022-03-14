@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Overview">
 
+    <ImageView
+        android:id="@+id/queuingheader"
+        android:layout_width="536dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="-20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/success_headere" />
+
     <TextView
         android:id="@+id/credits4"
         android:layout_width="wrap_content"
@@ -17,7 +28,6 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -34,39 +44,24 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/lbl_success2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="167dp"
-        android:fontFamily="@font/poppins"
-        android:gravity="center_horizontal"
-        android:text="Transaction Success!"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="32sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/lbl_studentno_r2"
         android:layout_width="126dp"
         android:layout_height="32dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="86dp"
         android:fontFamily="@font/poppins"
         android:text="Student No:"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/studentno_text_view"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/take" />
+        app:layout_constraintTop_toBottomOf="@+id/queuingheader" />
 
     <TextView
         android:id="@+id/studentno_text_view"
         android:layout_width="164dp"
         android:layout_height="32dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="86dp"
         android:layout_marginEnd="38dp"
         android:fontFamily="@font/poppins"
         android:text="03-1920-03279"
@@ -74,7 +69,7 @@
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/take" />
+        app:layout_constraintTop_toBottomOf="@+id/queuingheader" />
 
     <TextView
         android:id="@+id/lbl_department_r2"
@@ -189,47 +184,72 @@
         app:layout_constraintTop_toBottomOf="@+id/date_text_view" />
 
     <TextView
-        android:id="@+id/lbl_reminders_c_r2"
-        android:layout_width="283dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="28dp"
-        android:gravity="center_horizontal"
-        android:text="Arrive at school on time and wear your facemask and faceshield"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/queue_text_view" />
-
-    <TextView
         android:id="@+id/take"
         android:layout_width="334dp"
         android:layout_height="39dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="50dp"
         android:gravity="center_horizontal"
         android:text="Please TAKE A SCREENSHOT as this will become your valid receipt during the transaction."
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="14sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/signout_review2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.559"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_success2" />
+        app:layout_constraintTop_toBottomOf="@+id/queue_text_view" />
 
     <ImageButton
         android:id="@+id/signout_review2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="104dp"
         android:background="#FFFFFF"
-        android:src="@drawable/signoutbig"
+        android:src="@drawable/signout"
         app:layout_constraintBottom_toTopOf="@+id/credits5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_reminders_c_r2"
-        app:layout_constraintVertical_bias="0.095"
+        app:layout_constraintTop_toBottomOf="@+id/take"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="298dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/poppins"
+        android:text="YOU ARE NUMBER #"
+        android:textAlignment="viewStart"
+        android:textColor="#4C4C4C"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_studentno_r2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.726"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/queuingheader" />
+
+    <TextView
+        android:id="@+id/youare"
+        android:layout_width="93dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/poppins"
+        android:text="4"
+        android:textAlignment="viewStart"
+        android:textColor="#4C4C4C"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_studentno_r2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/queuingheader"
+        app:layout_constraintVertical_bias="0.333" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

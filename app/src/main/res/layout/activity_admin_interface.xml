@@ -50,7 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/queuingheader"
         app:layout_constraintVertical_bias="0.993" />
 
     <ImageView
@@ -58,6 +58,13 @@
         android:layout_width="602dp"
         android:layout_height="252dp"
         android:layout_marginTop="-20dp"
+        android:id="@+id/imageView"
+        android:layout_width="453dp"
+        android:layout_height="221dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/queuingheader"
+        android:layout_width="415dp"
+        android:layout_height="210dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -134,6 +141,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.354" />
+        app:layout_constraintVertical_bias="0.306" />
+        app:layout_constraintTop_toBottomOf="@+id/queuingheader" />
 
     <ImageButton
         android:id="@+id/signout_button"

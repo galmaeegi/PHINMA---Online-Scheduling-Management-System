@@ -41,6 +41,7 @@ public class Overview extends AppCompatActivity {
         TextView purposeDisplay = findViewById(R.id.purpose_text_view);
         TextView dateDisplay = findViewById(R.id.date_text_view);
         TextView queueDisplay = findViewById(R.id.queue_text_view);
+        TextView youDisplay = findViewById(R.id.youare);
 
         Bundle bn = getIntent().getExtras();
 
@@ -58,6 +59,9 @@ public class Overview extends AppCompatActivity {
 
         String queue = bn.getString("queueKey");
         queueDisplay.setText(queue);
+
+        youDisplay.setText(queue);
+
 
 
         ImageButton snoutReview = (ImageButton) findViewById(R.id.signout_review2);
