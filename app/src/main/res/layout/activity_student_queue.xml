@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,41 +10,54 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="415dp"
-        android:layout_height="210dp"
-        android:layout_marginTop="-1dp"
+        android:id="@+id/queuingheader1"
+        android:layout_width="602dp"
+        android:layout_height="252dp"
+        android:layout_marginTop="-20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/banner_big" />
+        app:srcCompat="@drawable/queueing_header" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="352dp"
+        android:layout_height="329dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/queuingheader1"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/queuing_plate" />
 
     <TextView
         android:id="@+id/CurrentQueue"
-        android:layout_width="352dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="289dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="44dp"
         android:fontFamily="@font/poppins"
-        android:text="Now serving student number:"
+        android:lineSpacingExtra="-10sp"
+        android:text="NOW SERVING CLIENT NUMBER:"
         android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/makesure"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/queuingheader1" />
 
     <TextView
         android:id="@+id/StudentCounter"
-        android:layout_width="340dp"
-        android:layout_height="wrap_content"
+        android:layout_width="234dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="20dp"
+        android:text="0"
         android:textAlignment="center"
         android:textSize="120sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/makesure" />
+        app:layout_constraintTop_toBottomOf="@+id/CurrentQueue" />
 
     <TextView
         android:id="@+id/credits7"
@@ -76,34 +90,32 @@
 
     <TextView
         android:id="@+id/unable"
-        android:layout_width="344dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginBottom="144dp"
-        android:text="If you are unable to come during your queue number, your transaction will be automatically voided."
+        android:layout_width="270dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="88dp"
+        android:text="YOU HAVE TO BE IN THE VENUE 5 MINUTES BEFORE YOUR NUMBER IS TO BE CALLED."
         android:textAlignment="center"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/credits7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/StudentCounter" />
 
     <TextView
-        android:id="@+id/makesure"
-        android:layout_width="289dp"
-        android:layout_height="43dp"
-        android:text="You have to be in the venue within 5 minutes during your queue number."
+        android:id="@+id/unable2"
+        android:layout_width="232dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="64dp"
+        android:text="DISCLAIMER:"
         android:textAlignment="center"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CurrentQueue" />
+        app:layout_constraintTop_toBottomOf="@+id/StudentCounter" />
 
     <Button
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
         android:text="Reschedule"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

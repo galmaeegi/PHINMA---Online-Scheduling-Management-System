@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WelcomeBack"
-    android:background="@drawable/bg1">
+    android:background="@drawable/bg_welcomeback">
 
 
     <TextView
         android:id="@+id/welcomeback_txt"
         android:layout_width="240dp"
         android:layout_height="57dp"
-        android:layout_marginTop="108dp"
         android:fontFamily="@font/poppins"
         android:lineSpacingExtra="-18sp"
         android:text="WELCOME."
@@ -22,34 +21,46 @@
         android:textStyle="bold"
         android:typeface="sans"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="381dp"
-        android:layout_height="108dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginBottom="105dp"
+        android:layout_width="361dp"
+        android:layout_height="304dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/welcomeback_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/welcomeback_logo" />
 
     <ImageButton
         android:id="@+id/welcome_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="204dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginTop="180dp"
         android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeback_txt"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/proceed_button"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="188dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ff" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

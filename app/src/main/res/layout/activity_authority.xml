@@ -5,17 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Authority"
-    android:background="@drawable/bg3">
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="356dp"
-        android:layout_height="111dp"
-        android:layout_marginTop="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+    android:background="@drawable/bg5">
 
     <!--University of Pangasinan-->
 
@@ -24,7 +14,7 @@
 
         android:layout_width="275dp"
         android:layout_height="70dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/student"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
@@ -34,7 +24,6 @@
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -45,6 +34,7 @@
         android:layout_width="275dp"
         android:layout_height="70dp"
 
+        android:layout_marginTop="4dp"
         android:background="@drawable/admin"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
@@ -54,7 +44,6 @@
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/auth_student"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -92,7 +81,7 @@
         android:id="@+id/textView3"
         android:layout_width="326dp"
         android:layout_height="36dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="7dp"
         android:fontFamily="@font/poppins"
         android:text="Logging in as?"
         android:textAlignment="center"
@@ -101,6 +90,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="296dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/authority_logo" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="322dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="157dp"
+        app:layout_constraintBottom_toTopOf="@+id/Credits2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auth_admin"
+        app:srcCompat="@drawable/line" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
