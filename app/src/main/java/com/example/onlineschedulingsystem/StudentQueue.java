@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -69,5 +70,19 @@ public class StudentQueue extends AppCompatActivity {
             }
         });
 
+        ImageButton smallSignOut = (ImageButton) findViewById(R.id.signout_button);
+
+        smallSignOut.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(StudentQueue.this,Login.class));
+
+            }
+        });
+
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 }

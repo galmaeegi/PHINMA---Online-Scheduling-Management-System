@@ -160,4 +160,7 @@ public class AdminInterface3 extends AppCompatActivity {
         counter++;
         counterTxt.setText(counter + "");
     }
+    @Override
+    public void onBackPressed() {
+    }
 }

@@ -20,10 +20,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/queueing_header" />
 
+    <ImageButton
+        android:id="@+id/signout_button"
+        android:layout_width="66dp"
+        android:layout_height="37dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.988"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        app:srcCompat="@drawable/signoutsmall"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="352dp"
-        android:layout_height="329dp"
+        android:layout_width="335dp"
+        android:layout_height="300dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,102 +47,72 @@
         app:srcCompat="@drawable/queuing_plate" />
 
     <TextView
-        android:id="@+id/TextViewNext"
-        android:layout_width="352dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="52dp"
         android:id="@+id/CurrentQueue"
-        android:layout_width="289dp"
-        android:layout_height="70dp"
+        android:layout_width="232dp"
+        android:layout_height="58dp"
         android:layout_marginTop="44dp"
         android:fontFamily="@font/poppins"
         android:lineSpacingExtra="-10sp"
         android:text="NOW SERVING CLIENT NUMBER:"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/queuingheader1" />
 
     <TextView
         android:id="@+id/StudentCounter"
-        android:layout_width="234dp"
-        android:layout_height="142dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="212dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="8dp"
         android:text="0"
         android:textAlignment="center"
         android:textSize="120sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/makesure"
-        tools:text="25" />
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CurrentQueue" />
-
-    <TextView
-        android:id="@+id/credits7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:fontFamily="@font/poppins"
-        android:text="©2021 - B2G4 - All Rights Reserved."
-        android:textAlignment="center"
-        android:textColor="#BFBFBF"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/credits8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/poppins"
-        android:text="PHINMA - University of Pangasinan"
-        android:textAlignment="center"
-        android:textColor="#BFBFBF"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/credits7" />
+        app:layout_constraintTop_toBottomOf="@+id/CurrentQueue"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/unable"
-        android:layout_width="270dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="88dp"
-        android:text="YOU HAVE TO BE IN THE VENUE 5 MINUTES BEFORE YOUR NUMBER IS TO BE CALLED."
+        android:layout_width="295dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="1dp"
+        android:text="You have to be in the venue 5 mintues before your number is to be called. If you fail to show up after the timer expires, your queue number will be automatically voided."
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/StudentCounter" />
+        app:layout_constraintTop_toBottomOf="@+id/unable2" />
 
     <TextView
         android:id="@+id/unable2"
-        android:layout_width="232dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="64dp"
+        android:layout_width="235dp"
+        android:layout_height="21dp"
         android:text="DISCLAIMER:"
         android:textAlignment="center"
+        android:textColor="#FF0000"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextViewNext" />
-        app:layout_constraintTop_toBottomOf="@+id/StudentCounter" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#08A193"
         android:text="Reschedule"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/unable" />
+        app:layout_constraintTop_toBottomOf="@+id/unable"
+        app:layout_constraintVertical_bias="0.323" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -109,6 +109,7 @@ public class Login extends AppCompatActivity {
                             //user is new = Account Created
                             Log.d(TAG, "onSuccess: Account Created...\n\n"+email);
                             Toast.makeText(Login.this, "Account created!\n\n" + email, Toast.LENGTH_SHORT).show();
+
                         } else {
                             //existing user - Logged in
                             Log.d(TAG, "onSuccess: Existing User...\n"+email);

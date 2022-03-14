@@ -61,7 +61,8 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/teller_3" />
+        app:srcCompat="@drawable/teller_3"
+        tools:srcCompat="@drawable/teller_3" />
 
     <ImageButton
         android:id="@+id/next"

@@ -31,7 +31,7 @@ public class Transaction extends AppCompatActivity{
     TextView purpose_view1, date_view, purposeTxt;
     EditText student_no;
     String valueFromStudent, valueFromDept, valueFromPurpose, valueFromDate;
-    String temp;
+    String temp = "";
     String valueFromQueue;
     Boolean hasChange;
     Boolean m_check, t_check, w_check, th_check, f_check, s_check;
@@ -296,11 +296,13 @@ public class Transaction extends AppCompatActivity{
         save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (temp=="Monday") {
-
-                    insertDataMon();
-                    //Sending data to Overview.class
-                    SendDataOverview();
-
+                    if (!f_check) {
+                        Toast.makeText(Transaction.this, "You selected a full slot! Please select another slot!", Toast.LENGTH_SHORT).show();
+                    } else {
+                        insertDataMon();
+                        //Sending data to Overview.class
+                        SendDataOverview();
+                    }
                 }
 
                 else if (temp=="Tuesday") {
@@ -471,7 +473,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean mondayCheck() {
-        if (m_maxid >= 5) {
+        if (m_maxid >= 100) {
             m_check = false;
         } else {
             m_check = true;
@@ -481,7 +483,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean tuesdayCheck() {
-        if (t_maxid >= 5) {
+        if (t_maxid >= 100) {
             t_check = false;
         } else {
             t_check = true;
@@ -491,7 +493,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean wednesdayCheck() {
-        if (w_maxid >= 5) {
+        if (w_maxid >= 100) {
             w_check = false;
         } else {
             w_check = true;
@@ -501,7 +503,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean thursdayCheck() {
-        if (th_maxid >= 5) {
+        if (th_maxid >= 100) {
             th_check = false;
         } else {
             th_check = true;
@@ -511,7 +513,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean fridayCheck() {
-        if (f_maxid >= 5) {
+        if (f_maxid >= 100) {
             f_check = false;
         } else {
             f_check = true;
@@ -521,7 +523,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean saturdayCheck() {
-        if (s_maxid >= 5) {
+        if (s_maxid >= 100) {
             s_check = false;
         } else {
             s_check = true;
