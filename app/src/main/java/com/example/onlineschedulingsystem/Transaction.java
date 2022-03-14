@@ -229,7 +229,6 @@ public class Transaction extends AppCompatActivity{
                 if (valueFromDate.equals("Monday")) {
                     if (!mondayCheck()){
                         Toast toast =Toast.makeText(Transaction.this, "         MONDAY is FULL! \n Please choose another day!",Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
                         toast.show();
                     } else {
                         temp = "Monday";
@@ -239,7 +238,6 @@ public class Transaction extends AppCompatActivity{
                 else if (valueFromDate.equals("Tuesday")) {
                     if (!tuesdayCheck()){
                         Toast toast =Toast.makeText(Transaction.this, "         Tuesday is FULL! \n Please choose another day!",Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
                         toast.show();
                     } else {
                         temp = "Tuesday";
@@ -250,7 +248,6 @@ public class Transaction extends AppCompatActivity{
                 else if (valueFromDate.equals("Wednesday")) {
                     if (!wednesdayCheck()){
                         Toast toast =Toast.makeText(Transaction.this, "         Wednesday is FULL! \n Please choose another day!",Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
                         toast.show();
                     } else {
                         temp = "Wednesday";
@@ -261,7 +258,6 @@ public class Transaction extends AppCompatActivity{
                 else if (valueFromDate.equals("Thursday")) {
                     if (!thursdayCheck()){
                         Toast toast =Toast.makeText(Transaction.this, "         Thursday is FULL! \n Please choose another day!",Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
                         toast.show();
                     } else {
                         temp = "Thursday";
@@ -270,7 +266,6 @@ public class Transaction extends AppCompatActivity{
                 } else if (valueFromDate.equals("Friday")) {
                     if (!fridayCheck()){
                         Toast toast =Toast.makeText(Transaction.this, "         Friday is FULL! \n Please choose another day!",Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
                         toast.show();
                     } else {
                         temp = "Friday";
@@ -279,7 +274,6 @@ public class Transaction extends AppCompatActivity{
                 } else if (valueFromDate.equals("Saturday")) {
                     if (!saturdayCheck()){
                         Toast toast =Toast.makeText(Transaction.this, "         Saturday is FULL! \n Please choose another day!",Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
                         toast.show();
                     } else {
                         temp = "Saturday";
@@ -477,7 +471,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean mondayCheck() {
-        if (m_maxid == 5) {
+        if (m_maxid >= 5) {
             m_check = false;
         } else {
             m_check = true;
@@ -487,7 +481,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean tuesdayCheck() {
-        if (t_maxid == 5) {
+        if (t_maxid >= 5) {
             t_check = false;
         } else {
             t_check = true;
@@ -497,7 +491,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean wednesdayCheck() {
-        if (w_maxid == 5) {
+        if (w_maxid >= 5) {
             w_check = false;
         } else {
             w_check = true;
@@ -507,7 +501,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean thursdayCheck() {
-        if (th_maxid == 5) {
+        if (th_maxid >= 5) {
             th_check = false;
         } else {
             th_check = true;
@@ -517,7 +511,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean fridayCheck() {
-        if (f_maxid == 5) {
+        if (f_maxid >= 5) {
             f_check = false;
         } else {
             f_check = true;
@@ -527,7 +521,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean saturdayCheck() {
-        if (s_maxid == 5) {
+        if (s_maxid >= 5) {
             s_check = false;
         } else {
             s_check = true;

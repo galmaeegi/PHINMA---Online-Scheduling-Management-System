@@ -7,15 +7,16 @@
     tools:context=".MainPage">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="415dp"
-        android:layout_height="210dp"
+        android:id="@+id/queuingheader"
+        android:layout_width="536dp"
+        android:layout_height="250dp"
 
 
+        android:layout_marginTop="-10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/banner_big" />
+        app:srcCompat="@drawable/welcome_student_header" />
 
     <ImageButton
         android:id="@+id/signout_button"
@@ -62,40 +63,32 @@
 
     <ImageButton
         android:id="@+id/main_schedule_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="166dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="490dp"
+        android:layout_height="314dp"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/Credits2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:srcCompat="@drawable/scheduling"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="77dp"
-        android:layout_marginTop="164dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:srcCompat="@drawable/welcomestudent" />
-
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="82dp"
+        android:layout_width="312dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="45dp"
         android:layout_marginBottom="15dp"
-        android:text="Schedule your transaction!"
-        android:textSize="24sp"
+        android:fontFamily="@font/poppins"
+        android:text="SCHEDULE YOUR FIRST TRANSACTION"
+        android:textAlignment="center"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/main_schedule_btn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/queuingheader" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
