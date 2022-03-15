@@ -35,6 +35,9 @@ public class StudentQueue extends AppCompatActivity {
     Button button;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    private TextView at1;
+    private TextView at2;
+    private TextView at3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +45,55 @@ public class StudentQueue extends AppCompatActivity {
         setContentView(R.layout.activity_student_queue);
 
         textView = findViewById(R.id.StudentCounter);
+        at1 = findViewById(R.id.aq1);
+        at2 = findViewById(R.id.aq2);
+        at3 = findViewById(R.id.aq3);
         button = findViewById(R.id.reset);
         firebaseDatabase = FirebaseDatabase.getInstance();
 
         ///Getting Child Data///
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("QUEUE");
+        DatabaseReference TellerOnereference = FirebaseDatabase.getInstance().getReference().child("TELLER ONE");
+        DatabaseReference TellerTworeference = FirebaseDatabase.getInstance().getReference().child("TELLER TWO");
+        DatabaseReference TellerThreereference = FirebaseDatabase.getInstance().getReference().child("TELLER THREE");
+
+
+        TellerOnereference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String t1data = dataSnapshot.child("NUMBER").getValue().toString();
+                at1.setText(t1data);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+
+        TellerTworeference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String t2data = dataSnapshot.child("NUMBER").getValue().toString();
+                at2.setText(t2data);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        TellerThreereference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String t3data = dataSnapshot.child("NUMBER").getValue().toString();
+                at3.setText(t3data);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
