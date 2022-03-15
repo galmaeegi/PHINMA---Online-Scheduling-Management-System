@@ -13,11 +13,13 @@
         android:id="@+id/queuingheader1"
         android:layout_width="602dp"
         android:layout_height="252dp"
-        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="492dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/queueing_header" />
 
     <ImageButton
@@ -36,18 +38,40 @@
 
     <ImageView
         android:id="@+id/imageView"
+        android:layout_width="550dp"
+        android:layout_height="219dp"
         android:layout_width="279dp"
         android:layout_height="191dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/queuingheader1"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.445"
         app:srcCompat="@drawable/queuing_plate" />
 
     <TextView
+        android:id="@+id/textViewTeller2"
+        android:layout_width="108dp"
+        android:layout_height="33dp"
+        android:fontFamily="@font/poppins"
+        android:text="TELLER 2"
+        android:textAlignment="center"
+
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.643" />
+
+    <TextView
         android:id="@+id/CurrentQueue"
+        android:layout_width="166dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
         android:layout_width="158dp"
         android:layout_height="40dp"
         android:layout_marginTop="28dp"
@@ -63,6 +87,7 @@
 
     <TextView
         android:id="@+id/StudentCounter"
+        android:layout_width="160dp"
         android:layout_width="139dp"
         android:layout_height="91dp"
         android:layout_marginTop="8dp"
@@ -71,6 +96,25 @@
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CurrentQueue"
+        app:layout_constraintVertical_bias="0.265" />
+
+    <TextView
+        android:id="@+id/textViewTeller3"
+        android:layout_width="108dp"
+        android:layout_height="34dp"
+        android:fontFamily="@font/poppins"
+        android:text="TELLER 3"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.642" />
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CurrentQueue"
         app:layout_constraintVertical_bias="0.156" />
@@ -83,9 +127,11 @@
         android:text="You have to be in the venue 5 mintues before your number is to be called. If you fail to show up after the timer expires, your queue number will be automatically voided."
         android:textAlignment="center"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/unable2" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
 
     <TextView
         android:id="@+id/unable2"
@@ -96,22 +142,84 @@
         android:textAlignment="center"
         android:textColor="#FF0000"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.795" />
 
     <Button
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:backgroundTint="#08A193"
         android:text="Reschedule"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/queuingheader1"
+        app:layout_constraintVertical_bias="0.977" />
+
+    <TextView
+        android:id="@+id/aq1"
+        android:layout_width="122dp"
+        android:layout_height="76dp"
+        android:background="@drawable/small_box"
+        android:text="25"
+        android:textAlignment="center"
+        android:textSize="46sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
+
+    <TextView
+        android:id="@+id/aq2"
+        android:layout_width="122dp"
+        android:layout_height="76dp"
+        android:background="@drawable/small_box"
+        android:text="25"
+        android:textAlignment="center"
+        android:textSize="46sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
+
+    <TextView
+        android:id="@+id/aq3"
+        android:layout_width="122dp"
+        android:layout_height="76dp"
+        android:background="@drawable/small_box"
+        android:text="25"
+        android:textAlignment="center"
+        android:textSize="46sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
+
+    <TextView
+        android:id="@+id/TextViewTeller1"
+        android:layout_width="108dp"
+        android:layout_height="33dp"
+        android:fontFamily="@font/poppins"
+        android:text="TELLER 1"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64" />
         app:layout_constraintTop_toBottomOf="@+id/unable"
         app:layout_constraintVertical_bias="0.222" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
