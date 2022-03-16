@@ -20,7 +20,7 @@ public class WelcomeBack extends AppCompatActivity {
         auth_btn_student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(WelcomeBack.this, Authority.class));
+                startActivity(new Intent(WelcomeBack.this, Reset.class));
             }
         });
     }

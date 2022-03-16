@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineSchedulingSystem">
         <activity
+            android:name=".Reset"
+            android:exported="false" />
+        <activity
             android:name=".AdminInterface3"
             android:exported="false" />
         <activity

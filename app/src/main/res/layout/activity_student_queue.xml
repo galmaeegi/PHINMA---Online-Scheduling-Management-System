@@ -13,13 +13,14 @@
         android:id="@+id/queuingheader1"
         android:layout_width="602dp"
         android:layout_height="252dp"
+        android:layout_marginTop="-10dp"
         android:layout_marginBottom="492dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/queueing_header" />
 
     <ImageButton
@@ -38,8 +39,6 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="550dp"
-        android:layout_height="219dp"
         android:layout_width="279dp"
         android:layout_height="191dp"
         android:layout_marginTop="8dp"
@@ -69,9 +68,6 @@
 
     <TextView
         android:id="@+id/CurrentQueue"
-        android:layout_width="166dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
         android:layout_width="158dp"
         android:layout_height="40dp"
         android:layout_marginTop="28dp"
@@ -88,7 +84,6 @@
     <TextView
         android:id="@+id/StudentCounter"
         android:layout_width="160dp"
-        android:layout_width="139dp"
         android:layout_height="91dp"
         android:layout_marginTop="8dp"
         android:text="0"
@@ -114,24 +109,27 @@
         app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.642" />
+        app:layout_constraintVertical_bias="0.642" /><![CDATA[
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CurrentQueue"
         app:layout_constraintVertical_bias="0.156" />
+
+
+
+    ]]>
 
     <TextView
         android:id="@+id/unable"
         android:layout_width="295dp"
         android:layout_height="80dp"
-        android:layout_marginTop="4dp"
         android:text="You have to be in the venue 5 mintues before your number is to be called. If you fail to show up after the timer expires, your queue number will be automatically voided."
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintTop_toBottomOf="@+id/unable2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/unable2"
@@ -146,7 +144,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.795" />
+        app:layout_constraintVertical_bias="0.751" />
 
     <Button
         android:id="@+id/reset"
@@ -165,7 +163,6 @@
         android:layout_width="122dp"
         android:layout_height="76dp"
         android:background="@drawable/small_box"
-        android:text="25"
         android:textAlignment="center"
         android:textSize="46sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -180,7 +177,6 @@
         android:layout_width="122dp"
         android:layout_height="76dp"
         android:background="@drawable/small_box"
-        android:text="25"
         android:textAlignment="center"
         android:textSize="46sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -195,7 +191,6 @@
         android:layout_width="122dp"
         android:layout_height="76dp"
         android:background="@drawable/small_box"
-        android:text="25"
         android:textAlignment="center"
         android:textSize="46sp"
         app:layout_constraintBottom_toBottomOf="parent"

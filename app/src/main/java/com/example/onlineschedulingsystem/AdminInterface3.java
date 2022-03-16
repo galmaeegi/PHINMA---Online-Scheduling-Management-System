@@ -135,7 +135,7 @@ public class AdminInterface3 extends AppCompatActivity {
         smallSignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AdminInterface3.this, WelcomeBack.class));
+                startActivity(new Intent(AdminInterface3.this, AdminSignIn.class));
             }
         });
         T1Text = (TextView) findViewById(R.id.t1);

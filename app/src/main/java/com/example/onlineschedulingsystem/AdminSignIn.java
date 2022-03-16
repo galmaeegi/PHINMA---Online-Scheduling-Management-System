@@ -54,6 +54,8 @@ public class AdminSignIn extends AppCompatActivity {
                         startActivity(intent1);
                         Toast.makeText(AdminSignIn.this,"Successfully logged in!", Toast.LENGTH_LONG).show();
 
+                    } else {
+                        Toast.makeText(AdminSignIn.this,"Invalid username or password!", Toast.LENGTH_LONG).show();
                     }
 
                 }

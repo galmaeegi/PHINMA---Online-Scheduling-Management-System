@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -41,7 +39,7 @@ public class MainPage extends AppCompatActivity {
             }
         });
 
-        ImageButton home = (ImageButton) findViewById(R.id.home_button);
+        ImageButton home = (ImageButton) findViewById(R.id.skip_as_guest);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

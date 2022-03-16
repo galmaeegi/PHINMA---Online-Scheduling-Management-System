@@ -12,6 +12,7 @@
         android:id="@+id/welcomeback_txt"
         android:layout_width="240dp"
         android:layout_height="57dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/poppins"
         android:lineSpacingExtra="-18sp"
         android:text="WELCOME."
@@ -27,12 +28,13 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="361dp"
-        android:layout_height="304dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="251dp"
+        android:layout_height="207dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@+id/welcomeback_txt"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/welcomeback_logo" />

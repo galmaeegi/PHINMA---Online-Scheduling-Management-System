@@ -23,11 +23,20 @@ public class Authority extends AppCompatActivity {
             }
         });
 
+
         ImageButton auth_btn_admin = (ImageButton) findViewById(R.id.auth_admin);
         auth_btn_admin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Authority.this, AdminSignIn.class));
+            }
+        });
+
+        ImageButton skipAsGuest = (ImageButton) findViewById(R.id.skip_as_guest);
+        skipAsGuest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Authority.this, Transaction.class));
             }
         });
     }
