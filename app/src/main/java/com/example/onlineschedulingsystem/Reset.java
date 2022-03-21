@@ -38,6 +38,8 @@ public class Reset extends AppCompatActivity {
                 }
                 /*IF RESET PASSWORD IS CORRECT*/
                 else if (resetText.getText().toString().equals(resetNum.toString())) {
+                    AdminInterface admin = new AdminInterface();
+                    admin.resetCounter();
                     Toast.makeText(Reset.this,"You reset the queue!", Toast.LENGTH_LONG).show();
 
                 } else {

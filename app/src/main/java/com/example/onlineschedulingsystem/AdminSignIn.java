@@ -15,14 +15,14 @@ public class AdminSignIn extends AppCompatActivity {
     EditText username, password;
     ImageButton adminBtn;
 
-    String correct_username1 = "adminteller1";
-    String correct_password1 = "adminteller1";
+    String correct_username1 = "1";
+    String correct_password1 = "1";
 
-    String correct_username2 = "adminteller2";
-    String correct_password2 = "adminteller2";
+    String correct_username2 = "2";
+    String correct_password2 = "2";
 
-    String correct_username3 = "adminteller3";
-    String correct_password3 = "adminteller3";
+    String correct_username3 = "3";
+    String correct_password3 = "3";
 
 
 
