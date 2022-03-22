@@ -100,7 +100,7 @@ public class AdminInterface extends AppCompatActivity {
         okay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(AdminInterface.this,"The Queue has been Rest",Toast.LENGTH_SHORT).show();
+                Toast.makeText(AdminInterface.this,"The queue has been reset",Toast.LENGTH_SHORT).show();
                 resetCounter();
                 String counter = counterTxt.getText().toString();
                 motherqueue = FirebaseDatabase.getInstance().getReference().child("QUEUE");
@@ -124,7 +124,7 @@ public class AdminInterface extends AppCompatActivity {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(AdminInterface.this,"The Queue was not reset",Toast.LENGTH_SHORT).show();
+
                 dialog.dismiss();
             }
         });

@@ -13,6 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineSchedulingSystem">
         <activity
+            android:name=".WelcomeBack"
+            android:exported="false"
+            android:theme="@style/Black"/>
+        <activity
             android:name=".Reset"
             android:exported="false" />
         <activity
@@ -23,22 +27,26 @@
             android:exported="false" />
         <activity
             android:name=".Authority"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Black" />
         <activity
             android:name=".StudentQueue"
             android:exported="false" />
         <activity
             android:name=".Transaction"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/White" />
         <activity
             android:name=".Login"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Black" />
         <activity
             android:name=".MainPage"
             android:exported="false" />
         <activity
             android:name=".AdminSignIn"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Black" />
         <activity
             android:name=".AdminInterface"
             android:exported="false" />
@@ -46,7 +54,7 @@
             android:name=".Overview"
             android:exported="false" />
         <activity
-            android:name=".WelcomeBack"
+            android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

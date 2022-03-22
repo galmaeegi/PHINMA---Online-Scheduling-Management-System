@@ -68,12 +68,13 @@
 
     <ImageButton
         android:id="@+id/next"
-        android:layout_width="171dp"
-        android:layout_height="59dp"
+        android:layout_width="175dp"
+        android:layout_height="52dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="9dp"
         android:background="@drawable/next"
         android:fontFamily="@font/poppins"
+        android:scaleType="fitCenter"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Rest"
@@ -84,8 +85,8 @@
 
     <ImageButton
         android:id="@+id/Rest"
-        android:layout_width="171dp"
-        android:layout_height="59dp"
+        android:layout_width="175dp"
+        android:layout_height="52dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/reset"
         android:fontFamily="@font/poppins"

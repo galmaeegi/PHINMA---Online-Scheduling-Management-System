@@ -36,7 +36,7 @@ public class Reset extends AppCompatActivity {
                 if (TextUtils.isEmpty(resetText.getText().toString())) {
                     Toast.makeText(Reset.this,"Invalid Input!", Toast.LENGTH_LONG).show();
                 }
-                /*IF RESET PASSWORD IS CORRECT*/
+                /*RALPH DITO KA MAGLAGAY NG METHODS.. IF RESET PASSWORD IS CORRECT*/
                 else if (resetText.getText().toString().equals(resetNum.toString())) {
                     AdminInterface admin = new AdminInterface();
                     admin.resetCounter();

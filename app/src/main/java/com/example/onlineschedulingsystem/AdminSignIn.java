@@ -15,14 +15,14 @@ public class AdminSignIn extends AppCompatActivity {
     EditText username, password;
     ImageButton adminBtn;
 
-    String correct_username1 = "1";
-    String correct_password1 = "1";
+    String correct_username1 = "admin1";
+    String correct_password1 = "admin1";
 
-    String correct_username2 = "2";
-    String correct_password2 = "2";
+    String correct_username2 = "admin2";
+    String correct_password2 = "admin2";
 
-    String correct_username3 = "3";
-    String correct_password3 = "3";
+    String correct_username3 = "admin3";
+    String correct_password3 = "admin3";
 
 
 
@@ -56,6 +56,7 @@ public class AdminSignIn extends AppCompatActivity {
 
                     } else {
                         Toast.makeText(AdminSignIn.this,"Invalid username or password!", Toast.LENGTH_LONG).show();
+
                     }
 
                 }

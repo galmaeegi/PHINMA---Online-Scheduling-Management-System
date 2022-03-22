@@ -43,7 +43,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/poppins"
-        android:text="IF YOU PRESS OKAY THE WHOLE QUEUE WILL RESET"
+        android:text="IF YOU PRESS 'OKAY' THE WHOLE QUEUE WILL RESET"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
