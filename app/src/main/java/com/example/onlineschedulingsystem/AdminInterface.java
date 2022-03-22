@@ -1,11 +1,16 @@
 package com.example.onlineschedulingsystem;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AlertDialogLayout;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -36,6 +41,7 @@ public class AdminInterface extends AppCompatActivity {
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
     private DatabaseReference motherqueue = db.getReference();
 
+    Dialog dialog;
 
     private FirebaseDatabase dbTeller = FirebaseDatabase.getInstance();
     private DatabaseReference tellerOne = dbTeller.getReference();
@@ -46,12 +52,14 @@ public class AdminInterface extends AppCompatActivity {
             switch (view.getId()) {
                 case R.id.next:
                     plusConter();
-
-                    break;
-                case R.id.Rest:
-                    resetCounter();
                     break;
             }
+            Rest.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    dialog.show();
+                }
+            });
             ///CREATING MOTHER DATA CHILD///
             String counter = counterTxt.getText().toString();
             motherqueue = FirebaseDatabase.getInstance().getReference().child("QUEUE");
@@ -75,11 +83,56 @@ public class AdminInterface extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_interface);
 
+        dialog = new Dialog(AdminInterface.this);
+        dialog.setContentView(R.layout.custom_dialog);
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+            dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.background));
+        }
+
+        ///DIALOG with Okay and Cancel button///
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(false);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+        Button okay = dialog.findViewById(R.id.Okay);
+        Button cancel = dialog.findViewById(R.id.Cancel);
+
+        okay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(AdminInterface.this,"The Queue has been Rest",Toast.LENGTH_SHORT).show();
+                resetCounter();
+                String counter = counterTxt.getText().toString();
+                motherqueue = FirebaseDatabase.getInstance().getReference().child("QUEUE");
+                motherqueue.child(String.valueOf(Integer.parseInt(counter + 1)));
+                ///CREATING MOTHER DATA CHILDREN///
+                HashMap<String, String> usermap = new HashMap<>();
+                usermap.put("CURRENT NUMBER", counter);
+                motherqueue.setValue(usermap);
+
+                ///CREATING TELLER ONE CHILD///
+                String telone = counterTxt.getText().toString();
+                tellerOne = FirebaseDatabase.getInstance().getReference().child("TELLER ONE");
+                ///CREATING TELLER ONE CHILDREN///
+                HashMap<String, String> tellerMap = new HashMap<>();
+                tellerMap.put("NUMBER", telone);
+                tellerOne.setValue(tellerMap);
+                dialog.dismiss();
+            }
+        });
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(AdminInterface.this,"The Queue was not reset",Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
+
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("QUEUE");
         DatabaseReference TellerOnereference = FirebaseDatabase.getInstance().getReference().child("TELLER ONE");
         DatabaseReference TellerTworeference = FirebaseDatabase.getInstance().getReference().child("TELLER TWO");
         DatabaseReference TellerThreereference = FirebaseDatabase.getInstance().getReference().child("TELLER THREE");
-
         ///GETTING MOTHER DATA///
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -142,6 +195,7 @@ public class AdminInterface extends AppCompatActivity {
                 startActivity(new Intent(AdminInterface.this, AdminSignIn.class));
             }
         });
+
         T1Text = (TextView) findViewById(R.id.t1);
         T2Text = (TextView) findViewById(R.id.t2);
         T3Text = (TextView) findViewById(R.id.t3);
@@ -154,7 +208,7 @@ public class AdminInterface extends AppCompatActivity {
 
     }
 
-    private void resetCounter() {
+    public void resetCounter() {
         counter = 0;
         counterTxt.setText(counter + "");
 

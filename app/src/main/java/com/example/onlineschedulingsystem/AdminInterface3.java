@@ -3,11 +3,16 @@ package com.example.onlineschedulingsystem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,6 +34,8 @@ public class AdminInterface3 extends AppCompatActivity {
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
     private DatabaseReference motherqueue = db.getReference();
 
+    Dialog dialog;
+
 
     private FirebaseDatabase dbTeller = FirebaseDatabase.getInstance();
     private DatabaseReference tellerThree = dbTeller.getReference();
@@ -39,12 +46,14 @@ public class AdminInterface3 extends AppCompatActivity {
             switch (view.getId()) {
                 case R.id.next:
                     plusConter();
-
-                    break;
-                case R.id.Rest:
-                    resetCounter();
                     break;
             }
+            Rest.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    dialog.show();
+                }
+            });
             ///CREATING MOTHER DATA CHILD///
             String counter = counterTxt.getText().toString();
             motherqueue = FirebaseDatabase.getInstance().getReference().child("QUEUE");
@@ -68,6 +77,52 @@ public class AdminInterface3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_interface2);
+
+        dialog = new Dialog(AdminInterface3.this);
+        dialog.setContentView(R.layout.custom_dialog);
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+            dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.background));
+        }
+
+        ///DIALOG with Okay and Cancel button///
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(false);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+        Button okay = dialog.findViewById(R.id.Okay);
+        Button cancel = dialog.findViewById(R.id.Cancel);
+
+        okay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(AdminInterface3.this,"The Queue has been Rest",Toast.LENGTH_SHORT).show();
+                resetCounter();
+                ///CREATING MOTHER DATA CHILD///
+                String counter = counterTxt.getText().toString();
+                motherqueue = FirebaseDatabase.getInstance().getReference().child("QUEUE");
+                motherqueue.child(String.valueOf(Integer.parseInt(counter + 1)));
+                ///CREATING MOTHER DATA CHILDREN///
+                HashMap<String, String> usermap = new HashMap<>();
+                usermap.put("CURRENT NUMBER", counter);
+                motherqueue.setValue(usermap);
+
+                ///CREATING TELLER ONE CHILD///
+                String telthree = counterTxt.getText().toString();
+                tellerThree = FirebaseDatabase.getInstance().getReference().child("TELLER THREE");
+                ///CREATING TELLER ONE CHILDREN///
+                HashMap<String, String> tellerMap = new HashMap<>();
+                tellerMap.put("NUMBER", telthree);
+                tellerThree.setValue(tellerMap);
+                dialog.dismiss();
+            }
+        });
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(AdminInterface3.this,"The Queue was not reset",Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
 
         ///Child Data Variables///
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("QUEUE");
