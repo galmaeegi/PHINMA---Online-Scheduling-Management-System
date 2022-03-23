@@ -76,7 +76,7 @@ public class AdminInterface3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_interface2);
+        setContentView(R.layout.activity_admin_interface3);
 
         dialog = new Dialog(AdminInterface3.this);
         dialog.setContentView(R.layout.custom_dialog);
