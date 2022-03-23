@@ -54,6 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/next"
         app:layout_constraintVertical_bias="0.993" />
 
+
     <ImageView
         android:id="@+id/queuingheader1"
         android:layout_width="602dp"
@@ -64,7 +65,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/teller_one" />
-
 
     <ImageButton
         android:id="@+id/next"
@@ -136,8 +136,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.354" />
-        app:layout_constraintVertical_bias="0.306" />
-        app:layout_constraintTop_toBottomOf="@+id/queuingheader" />
 
     <ImageButton
         android:id="@+id/signout_button"

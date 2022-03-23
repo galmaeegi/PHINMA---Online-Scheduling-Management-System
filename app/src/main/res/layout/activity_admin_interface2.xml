@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AdminInterface2">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textViewTeller2"
@@ -53,7 +52,6 @@
         app:layout_constraintVertical_bias="0.993" />
 
     <ImageView
-        android:id="@+id/queuingheader1"
         android:layout_width="602dp"
         android:layout_height="252dp"
         android:layout_marginTop="-20dp"
@@ -61,7 +59,7 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/teller_two" />
+        android:src="@drawable/teller_two"/>
 
     <ImageButton
         android:id="@+id/next"
