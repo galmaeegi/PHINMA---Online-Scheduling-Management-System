@@ -69,14 +69,14 @@
         android:id="@+id/CurrentQueue"
         android:layout_width="126dp"
         android:layout_height="39dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/poppins"
         android:lineSpacingExtra="-2sp"
         android:text="NOW SERVING CLIENT NUMBER:"
         android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/queuingheader1" />
 
