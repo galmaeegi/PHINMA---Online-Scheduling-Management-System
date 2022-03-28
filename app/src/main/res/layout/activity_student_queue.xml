@@ -44,10 +44,9 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445"
+        app:layout_constraintVertical_bias="0.409"
         app:srcCompat="@drawable/queuing_plate" />
 
     <TextView
@@ -68,16 +67,16 @@
 
     <TextView
         android:id="@+id/CurrentQueue"
-        android:layout_width="158dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="126dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins"
         android:lineSpacingExtra="-2sp"
         android:text="NOW SERVING CLIENT NUMBER:"
         android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/queuingheader1" />
 
@@ -86,7 +85,7 @@
         android:layout_width="160dp"
         android:layout_height="91dp"
         android:layout_marginTop="8dp"
-        android:text="0"
+        android:text="1232"
         android:textAlignment="center"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
@@ -163,6 +162,7 @@
         android:layout_width="122dp"
         android:layout_height="76dp"
         android:background="@drawable/small_box"
+        android:paddingTop="7sp"
         android:textAlignment="center"
         android:textSize="46sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -177,6 +177,8 @@
         android:layout_width="122dp"
         android:layout_height="76dp"
         android:background="@drawable/small_box"
+        android:paddingTop="7sp"
+        android:text="21"
         android:textAlignment="center"
         android:textSize="46sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -191,6 +193,7 @@
         android:layout_width="122dp"
         android:layout_height="76dp"
         android:background="@drawable/small_box"
+        android:paddingTop="7sp"
         android:textAlignment="center"
         android:textSize="46sp"
         app:layout_constraintBottom_toBottomOf="parent"
