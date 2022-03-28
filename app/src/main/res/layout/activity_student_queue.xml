@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409"
+        app:layout_constraintVertical_bias="0.45"
         app:srcCompat="@drawable/queuing_plate" />
 
     <TextView
@@ -85,7 +85,6 @@
         android:layout_width="160dp"
         android:layout_height="91dp"
         android:layout_marginTop="8dp"
-        android:text="1232"
         android:textAlignment="center"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
