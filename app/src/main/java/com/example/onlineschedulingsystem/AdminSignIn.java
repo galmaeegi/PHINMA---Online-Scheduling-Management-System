@@ -24,6 +24,9 @@ public class AdminSignIn extends AppCompatActivity {
     String correct_username3 = "admin3";
     String correct_password3 = "admin3";
 
+    String correct_username4 = "1";
+    String correct_password4 = "1";
+
 
 
     @Override
@@ -40,6 +43,7 @@ public class AdminSignIn extends AppCompatActivity {
         Intent intent1 = new Intent(AdminSignIn.this,AdminInterface.class);
         Intent intent2 = new Intent(AdminSignIn.this,AdminInterface2.class);
         Intent intent3 = new Intent(AdminSignIn.this,AdminInterface3.class);
+        Intent intent4 = new Intent(AdminSignIn.this,KingAdmin.class);
 
 
         adminBtn.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +77,15 @@ public class AdminSignIn extends AppCompatActivity {
                 else if (username.getText().toString().equals(correct_username3)){
                     if (password.getText().toString().equals(correct_password3)) {
                         startActivity(intent3);
+                        Toast.makeText(AdminSignIn.this,"Successfully logged in!", Toast.LENGTH_LONG).show();
+
+                    }
+
+                }
+
+                else if (username.getText().toString().equals(correct_username4)){
+                    if (password.getText().toString().equals(correct_password4)) {
+                        startActivity(intent4);
                         Toast.makeText(AdminSignIn.this,"Successfully logged in!", Toast.LENGTH_LONG).show();
 
                     }

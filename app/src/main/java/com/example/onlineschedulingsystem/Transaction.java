@@ -36,9 +36,24 @@ public class Transaction extends AppCompatActivity{
     Boolean hasChange;
     Boolean m_check, t_check, w_check, th_check, f_check, s_check;
 
+    FirebaseDatabase firebaseDatabase;
+
+
+
     DatabaseReference MonReff, TueReff, WedReff, ThuReff, FriReff, SatReff;
 
+
+
+
     long m_maxid,t_maxid, w_maxid, th_maxid, f_maxid, s_maxid = 0;
+
+    /*Placement variables for admin's custom chosen slots*/
+    int m_slots;
+    int t_slots;
+    int w_slots;
+    int th_slots;
+    int f_slots;
+    int s_slots;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +81,103 @@ public class Transaction extends AppCompatActivity{
         ThuReff = FirebaseDatabase.getInstance().getReference() .child("Thursday");
         FriReff = FirebaseDatabase.getInstance().getReference() .child("Friday");
         SatReff = FirebaseDatabase.getInstance().getReference() .child("Saturday");
+
+
+        /*Getting admin chosen slots to students*/
+        DatabaseReference MonSlot = FirebaseDatabase.getInstance().getReference().child("Monday Slot");
+        DatabaseReference TueSlot = FirebaseDatabase.getInstance().getReference().child("Tuesday Slot");
+        DatabaseReference WedSlot = FirebaseDatabase.getInstance().getReference().child("Wednesday Slot");
+        DatabaseReference ThuSlot = FirebaseDatabase.getInstance().getReference().child("Thursday Slot");
+        DatabaseReference FriSlot = FirebaseDatabase.getInstance().getReference().child("Friday Slot");
+        DatabaseReference SatSlot = FirebaseDatabase.getInstance().getReference().child("Saturday Slot");
+
+        /*Data Snapshot Monday Slot*/
+        MonSlot.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String mondaySlotDataSnapshot = dataSnapshot.child("CURRENT NUMBER").getValue().toString();
+                m_slots = Integer.parseInt(mondaySlotDataSnapshot);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        TueSlot.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String tuesdaySlotDataSnapshot = dataSnapshot.child("CURRENT NUMBER").getValue().toString();
+                t_slots = Integer.parseInt(tuesdaySlotDataSnapshot);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        WedSlot.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String wedSlotDataSnapshot = dataSnapshot.child("CURRENT NUMBER").getValue().toString();
+                w_slots = Integer.parseInt(wedSlotDataSnapshot);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        ThuSlot.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String thuSlotDataSnapshot = dataSnapshot.child("CURRENT NUMBER").getValue().toString();
+                th_slots = Integer.parseInt(thuSlotDataSnapshot);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        FriSlot.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String friSlotDataSnapshot = dataSnapshot.child("CURRENT NUMBER").getValue().toString();
+                f_slots = Integer.parseInt(friSlotDataSnapshot);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        SatSlot.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String satSlotDataSnapshot = dataSnapshot.child("CURRENT NUMBER").getValue().toString();
+                s_slots = Integer.parseInt(satSlotDataSnapshot);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
 
 
         /*Checking slots if full or not*/
@@ -296,13 +408,10 @@ public class Transaction extends AppCompatActivity{
         save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (temp=="Monday") {
-                    if (!f_check) {
-                        Toast.makeText(Transaction.this, "You selected a full slot! Please select another slot!", Toast.LENGTH_SHORT).show();
-                    } else {
+
                         insertDataMon();
                         //Sending data to Overview.class
                         SendDataOverview();
-                    }
                 }
 
                 else if (temp=="Tuesday") {
@@ -351,6 +460,11 @@ public class Transaction extends AppCompatActivity{
         });
 
     }
+
+
+
+
+
     /*Insertion Method (MONDAY)*/
     private void insertDataMon() {
 
@@ -473,7 +587,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean mondayCheck() {
-        if (m_maxid >= 100) {
+        if (m_maxid >= m_slots) {
             m_check = false;
         } else {
             m_check = true;
@@ -483,7 +597,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean tuesdayCheck() {
-        if (t_maxid >= 100) {
+        if (t_maxid >= t_slots) {
             t_check = false;
         } else {
             t_check = true;
@@ -493,7 +607,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean wednesdayCheck() {
-        if (w_maxid >= 100) {
+        if (w_maxid >= w_slots) {
             w_check = false;
         } else {
             w_check = true;
@@ -503,7 +617,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean thursdayCheck() {
-        if (th_maxid >= 100) {
+        if (th_maxid >= th_slots) {
             th_check = false;
         } else {
             th_check = true;
@@ -513,7 +627,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean fridayCheck() {
-        if (f_maxid >= 100) {
+        if (f_maxid >= f_slots) {
             f_check = false;
         } else {
             f_check = true;
@@ -523,7 +637,7 @@ public class Transaction extends AppCompatActivity{
 
     /*Checking if the day is full*/
     public boolean saturdayCheck() {
-        if (s_maxid >= 100) {
+        if (s_maxid >= s_slots) {
             s_check = false;
         } else {
             s_check = true;

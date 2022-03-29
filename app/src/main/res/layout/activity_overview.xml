@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/success_headere" />
 
     <ImageButton
-        android:id="@+id/skip_as_guest"
+        android:id="@+id/home_small"
         android:layout_width="99dp"
         android:layout_height="44dp"
         android:background="#00FFFFFF"

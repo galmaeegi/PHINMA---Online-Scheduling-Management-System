@@ -38,6 +38,15 @@ public class MainPage extends AppCompatActivity {
 
             }
         });
+
+        ImageButton home_button = (ImageButton) findViewById(R.id.home_small);
+
+        home_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainPage.this,StudentQueue.class));
+
+            }
+        });
     }
 
     @Override

@@ -9,6 +9,38 @@
 
 
     <!--PHINMA - University of Pangasinan-->
+
+    <TextView
+        android:id="@+id/unable4"
+        android:layout_width="235dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="150dp"
+        android:text="DISCLAIMER:"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.762" />
+
+    <TextView
+        android:id="@+id/unable3"
+        android:layout_width="228dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="72dp"
+        android:text="Your information and credentials will be confidential."
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unable2"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/credits"
         android:layout_width="wrap_content"

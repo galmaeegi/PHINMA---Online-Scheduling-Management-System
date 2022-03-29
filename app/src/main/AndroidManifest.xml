@@ -13,9 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineSchedulingSystem">
         <activity
+            android:name=".KingAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".SetSlots"
+            android:exported="false" />
+        <activity
             android:name=".WelcomeBack"
             android:exported="false"
-            android:theme="@style/Black"/>
+            android:theme="@style/Black" />
         <activity
             android:name=".AdminInterface3"
             android:exported="false" />

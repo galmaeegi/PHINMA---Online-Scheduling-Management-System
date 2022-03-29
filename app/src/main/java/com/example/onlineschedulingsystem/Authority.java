@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class Authority extends AppCompatActivity {
@@ -32,7 +31,7 @@ public class Authority extends AppCompatActivity {
             }
         });
 
-        ImageButton skipAsGuest = (ImageButton) findViewById(R.id.skip_as_guest);
+        ImageButton skipAsGuest = (ImageButton) findViewById(R.id.home_small);
         skipAsGuest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
