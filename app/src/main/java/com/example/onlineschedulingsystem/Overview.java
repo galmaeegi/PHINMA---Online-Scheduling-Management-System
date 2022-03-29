@@ -71,6 +71,13 @@ public class Overview extends AppCompatActivity {
                 startActivity(new Intent(Overview.this,WelcomeBack.class));
             }
         });
+        ImageButton home = (ImageButton) findViewById(R.id.skip_as_guest);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Overview.this,StudentQueue.class));
+            }
+        });
 
 
     }
