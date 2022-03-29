@@ -7,7 +7,6 @@
     tools:context=".AdminSignIn"
     android:background="@drawable/bg4">
 
-
     <EditText
         android:id="@+id/admin_user"
         android:layout_width="wrap_content"
