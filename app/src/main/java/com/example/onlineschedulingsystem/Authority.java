@@ -42,6 +42,7 @@ public class Authority extends AppCompatActivity {
                 System.exit(0);
             }
         });
+
         ImageButton auth_btn_student = (ImageButton) findViewById(R.id.auth_student);
         auth_btn_student.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +53,6 @@ public class Authority extends AppCompatActivity {
                 //Getting the devices time//
                 Calendar calendar = Calendar.getInstance();
                 int hr = calendar.get(Calendar.HOUR_OF_DAY);
-                int min = calendar.get(Calendar.MINUTE);
 
                 //Comparing the Mobile to to the Set Time 7AM-11:59pm
                 if (hr>=hourOfDay && hr<=closingday){
