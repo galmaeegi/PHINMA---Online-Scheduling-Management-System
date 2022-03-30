@@ -12,8 +12,6 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class Overview extends AppCompatActivity {
 
     ImageButton snoutReview;
@@ -71,7 +69,7 @@ public class Overview extends AppCompatActivity {
                 startActivity(new Intent(Overview.this,WelcomeBack.class));
             }
         });
-        ImageButton home = (ImageButton) findViewById(R.id.skip_as_guest);
+        ImageButton home = (ImageButton) findViewById(R.id.home_small);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

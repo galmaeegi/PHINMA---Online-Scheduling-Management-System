@@ -78,7 +78,7 @@ public class Authority extends AppCompatActivity {
             }
         });
 
-        ImageButton skipAsGuest = (ImageButton) findViewById(R.id.skip_as_guest);
+        ImageButton skipAsGuest = (ImageButton) findViewById(R.id.home_small);
         skipAsGuest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -10,7 +10,7 @@
     <!--University of Pangasinan-->
 
     <ImageButton
-        android:id="@+id/skip_as_guest"
+        android:id="@+id/home_small"
         android:layout_width="135dp"
         android:layout_height="78dp"
         android:background="#00FFFFFF"
