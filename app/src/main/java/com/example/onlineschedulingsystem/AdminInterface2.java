@@ -33,6 +33,7 @@ public class AdminInterface2 extends AppCompatActivity {
     private TextView T3Text;
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
     private DatabaseReference motherqueue = db.getReference();
+    public int s2 = 0;
 
     Dialog dialog;
 
@@ -70,6 +71,15 @@ public class AdminInterface2 extends AppCompatActivity {
             HashMap<String, String> tellerMap = new HashMap<>();
             tellerMap.put("NUMBER", teltwo);
             tellerTwo.setValue(tellerMap);
+            //////////////////////////////////////////
+
+            //Creating Summary one//
+            s2 = s2+1;
+            tellerTwo = FirebaseDatabase.getInstance().getReference().child("SUMMARY TWO");
+            ///CREATING TELLER ONE CHILDREN///
+            HashMap<String, Integer> summary2 = new HashMap<>();
+            summary2.put("NUMBER", s2);
+            tellerTwo.setValue(summary2);
         }
     };
 
@@ -89,7 +99,7 @@ public class AdminInterface2 extends AppCompatActivity {
         dialog.setCancelable(false);
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 
-        Button okay = dialog.findViewById(R.id.Okay);
+        Button okay = dialog.findViewById(R.id.ok);
         Button cancel = dialog.findViewById(R.id.Cancel);
 
         okay.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +107,7 @@ public class AdminInterface2 extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(AdminInterface2.this,"The Queue has been Rest",Toast.LENGTH_SHORT).show();
                 resetCounter();
+                resetSummary();
                 ///CREATING MOTHER DATA CHILD///
                 String counter = counterTxt.getText().toString();
                 motherqueue = FirebaseDatabase.getInstance().getReference().child("QUEUE");
@@ -212,6 +223,15 @@ public class AdminInterface2 extends AppCompatActivity {
         counter = Integer.parseInt(counterTxt.getText().toString());
         counter++;
         counterTxt.setText(counter + "");
+    }
+
+    public void resetSummary(){
+        s2 = 0;
+        tellerTwo = FirebaseDatabase.getInstance().getReference().child("SUMMARY TWO");
+        ///CREATING TELLER ONE CHILDREN///
+        HashMap<String, Integer> summary2 = new HashMap<>();
+        summary2.put("NUMBER", s2);
+        tellerTwo.setValue(summary2);
     }
     @Override
     public void onBackPressed() {

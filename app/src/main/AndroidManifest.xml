@@ -13,9 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineSchedulingSystem">
         <activity
+            android:name=".Summary_interface"
+            android:exported="false" />
+        <activity
             android:name=".WelcomeBack"
             android:exported="false"
-            android:theme="@style/Black"/>
+            android:theme="@style/Black" />
         <activity
             android:name=".AdminInterface3"
             android:exported="false" />

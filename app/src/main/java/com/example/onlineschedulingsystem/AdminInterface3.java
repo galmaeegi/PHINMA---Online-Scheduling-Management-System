@@ -7,10 +7,8 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -35,6 +33,7 @@ public class AdminInterface3 extends AppCompatActivity {
     private TextView T3Text;
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
     private DatabaseReference motherqueue = db.getReference();
+    public int s3 = 0;
 
     Dialog dialog;
 
@@ -72,6 +71,13 @@ public class AdminInterface3 extends AppCompatActivity {
             HashMap<String, String> tellerMap = new HashMap<>();
             tellerMap.put("NUMBER", telthree);
             tellerThree.setValue(tellerMap);
+
+            s3 = s3+1;
+            tellerThree = FirebaseDatabase.getInstance().getReference().child("SUMMARY THREE");
+            ///CREATING TELLER ONE CHILDREN///
+            HashMap<String, Integer> summary3 = new HashMap<>();
+            summary3.put("NUMBER", s3);
+            tellerThree.setValue(summary3);
         }
     };
 
@@ -91,7 +97,7 @@ public class AdminInterface3 extends AppCompatActivity {
         dialog.setCancelable(false);
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 
-        Button okay = dialog.findViewById(R.id.Okay);
+        Button okay = dialog.findViewById(R.id.ok);
         Button cancel = dialog.findViewById(R.id.Cancel);
 
         okay.setOnClickListener(new View.OnClickListener() {
@@ -99,6 +105,7 @@ public class AdminInterface3 extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(AdminInterface3.this,"The Queue has been Rest",Toast.LENGTH_SHORT).show();
                 resetCounter();
+                resetSummary();
                 ///CREATING MOTHER DATA CHILD///
                 String counter = counterTxt.getText().toString();
                 motherqueue = FirebaseDatabase.getInstance().getReference().child("QUEUE");
@@ -216,6 +223,15 @@ public class AdminInterface3 extends AppCompatActivity {
         counter = Integer.parseInt(counterTxt.getText().toString());
         counter++;
         counterTxt.setText(counter + "");
+    }
+
+    public void resetSummary(){
+        s3 = 0;
+        tellerThree = FirebaseDatabase.getInstance().getReference().child("SUMMARY THREE");
+        ///CREATING TELLER ONE CHILDREN///
+        HashMap<String, Integer> summary2 = new HashMap<>();
+        summary2.put("NUMBER", s3);
+        tellerThree.setValue(summary2);
     }
     @Override
     public void onBackPressed() {
