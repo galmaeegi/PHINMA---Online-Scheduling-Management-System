@@ -16,7 +16,6 @@ import java.util.Date;
 
 public class WelcomeBack extends AppCompatActivity {
 
-    Context con;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +27,7 @@ public class WelcomeBack extends AppCompatActivity {
         auth_btn_student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(WelcomeBack.this, Authority.class));
+                startActivity(new Intent(WelcomeBack.this, Summary_interface.class));
             }
         });
     }

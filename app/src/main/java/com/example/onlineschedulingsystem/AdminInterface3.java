@@ -208,7 +208,7 @@ public class AdminInterface3 extends AppCompatActivity {
         counterTxt = (TextView) findViewById(R.id.countertxt);
         Next = (ImageButton) findViewById(R.id.next);
         Next.setOnClickListener(clickListener);
-        Rest = (ImageButton) findViewById(R.id.Rest);
+        Rest = (ImageButton) findViewById(R.id.Reset);
         Rest.setOnClickListener(clickListener);
         resetCounter();
     }

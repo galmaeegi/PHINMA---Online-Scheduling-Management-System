@@ -77,14 +77,14 @@
         android:scaleType="fitCenter"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Rest"
+        app:layout_constraintEnd_toStartOf="@+id/Reset"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.907"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/Rest"
+        android:id="@+id/Reset"
         android:layout_width="175dp"
         android:layout_height="52dp"
         android:layout_marginEnd="16dp"

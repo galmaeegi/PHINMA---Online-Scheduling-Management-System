@@ -105,7 +105,6 @@ public class AdminInterface extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(AdminInterface.this,"The queue has been reset",Toast.LENGTH_SHORT).show();
                 resetCounter();
-                resetSummary();
                 String counter = counterTxt.getText().toString();
                 motherqueue = FirebaseDatabase.getInstance().getReference().child("QUEUE");
                 motherqueue.child(String.valueOf(Integer.parseInt(counter + 1)));
@@ -208,7 +207,7 @@ public class AdminInterface extends AppCompatActivity {
         counterTxt = (TextView) findViewById(R.id.countertxt);
         Next = (ImageButton) findViewById(R.id.next);
         Next.setOnClickListener(clickListener);
-        Rest = (ImageButton) findViewById(R.id.Rest);
+        Rest = (ImageButton) findViewById(R.id.Reset);
         Rest.setOnClickListener(clickListener);
         resetCounter();
 
