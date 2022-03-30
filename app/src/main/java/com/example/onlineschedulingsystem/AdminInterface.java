@@ -1,9 +1,7 @@
 package com.example.onlineschedulingsystem;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AlertDialogLayout;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -16,18 +14,13 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class AdminInterface extends AppCompatActivity {
 
@@ -40,6 +33,7 @@ public class AdminInterface extends AppCompatActivity {
     private TextView T3Text;
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
     private DatabaseReference motherqueue = db.getReference();
+    public int s1 = 0;
 
     Dialog dialog;
 
@@ -76,6 +70,15 @@ public class AdminInterface extends AppCompatActivity {
             HashMap<String, String> tellerMap = new HashMap<>();
             tellerMap.put("NUMBER", telone);
             tellerOne.setValue(tellerMap);
+
+            //////////////////////////////////////////////////////////////
+            //Creating Summary one//
+            s1 = s1+1;
+            tellerOne = FirebaseDatabase.getInstance().getReference().child("SUMMARY ONE");
+            ///CREATING TELLER ONE CHILDREN///
+            HashMap<String, Integer> summary1 = new HashMap<>();
+            summary1.put("NUMBER", s1);
+            tellerOne.setValue(summary1);
         }
     };
     @Override
@@ -94,7 +97,7 @@ public class AdminInterface extends AppCompatActivity {
         dialog.setCancelable(false);
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 
-        Button okay = dialog.findViewById(R.id.Okay);
+        Button okay = dialog.findViewById(R.id.ok);
         Button cancel = dialog.findViewById(R.id.Cancel);
 
         okay.setOnClickListener(new View.OnClickListener() {
@@ -102,6 +105,7 @@ public class AdminInterface extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(AdminInterface.this,"The queue has been reset",Toast.LENGTH_SHORT).show();
                 resetCounter();
+                resetSummary();
                 String counter = counterTxt.getText().toString();
                 motherqueue = FirebaseDatabase.getInstance().getReference().child("QUEUE");
                 motherqueue.child(String.valueOf(Integer.parseInt(counter + 1)));
@@ -117,6 +121,7 @@ public class AdminInterface extends AppCompatActivity {
                 HashMap<String, String> tellerMap = new HashMap<>();
                 tellerMap.put("NUMBER", telone);
                 tellerOne.setValue(tellerMap);
+
                 dialog.dismiss();
             }
         });
@@ -133,6 +138,7 @@ public class AdminInterface extends AppCompatActivity {
         DatabaseReference TellerOnereference = FirebaseDatabase.getInstance().getReference().child("TELLER ONE");
         DatabaseReference TellerTworeference = FirebaseDatabase.getInstance().getReference().child("TELLER TWO");
         DatabaseReference TellerThreereference = FirebaseDatabase.getInstance().getReference().child("TELLER THREE");
+
         ///GETTING MOTHER DATA///
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -218,6 +224,14 @@ public class AdminInterface extends AppCompatActivity {
         counter = Integer.parseInt(counterTxt.getText().toString());
         counter++;
         counterTxt.setText(counter + "");
+    }
+    public void resetSummary(){
+        s1 = 0;
+        tellerOne = FirebaseDatabase.getInstance().getReference().child("SUMMARY ONE");
+        ///CREATING TELLER ONE CHILDREN///
+        HashMap<String, Integer> summary1 = new HashMap<>();
+        summary1.put("NUMBER", s1);
+        tellerOne.setValue(summary1);
     }
     @Override
     public void onBackPressed() {
