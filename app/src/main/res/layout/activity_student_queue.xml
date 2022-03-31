@@ -37,16 +37,18 @@
         app:srcCompat="@drawable/signoutsmall"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
+
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="279dp"
-        android:layout_height="191dp"
+        android:id="@+id/imageView8"
+        android:layout_width="96dp"
+        android:layout_height="162dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.986"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintVertical_bias="0.466"
         app:srcCompat="@drawable/queuing_plate" />
 
     <TextView
@@ -66,33 +68,18 @@
         app:layout_constraintVertical_bias="0.643" />
 
     <TextView
-        android:id="@+id/CurrentQueue"
-        android:layout_width="126dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/poppins"
-        android:lineSpacingExtra="-2sp"
-        android:text="NOW SERVING CLIENT NUMBER:"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/queuingheader1" />
-
-    <TextView
         android:id="@+id/StudentCounter"
-        android:layout_width="160dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="175dp"
+        android:layout_height="167dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/queuing_plate"
+        android:paddingTop="60sp"
+        android:text="3"
         android:textAlignment="center"
         android:textSize="60sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTeller3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CurrentQueue"
-        app:layout_constraintVertical_bias="0.265" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewTeller3"
@@ -166,10 +153,10 @@
         android:textSize="46sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.746" />
+        app:layout_constraintVertical_bias="0.745" />
 
     <TextView
         android:id="@+id/aq2"
@@ -215,7 +202,67 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.64" />
-        app:layout_constraintTop_toBottomOf="@+id/unable"
+
+    <TextView
+        android:id="@+id/holder_txt"
+        android:layout_width="57dp"
+        android:layout_height="40dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="57dp"
+        android:layout_height="19dp"
+        android:text="minutes"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/holder_txt" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="312dp"
+        android:text="Est. Time"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toEndOf="@+id/CurrentQueue"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/CurrentQueue"
+        android:layout_width="126dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="288dp"
+        android:fontFamily="@font/poppins"
+        android:lineSpacingExtra="-2sp"
+        android:text="NOW SERVING CLIENT NUMBER:"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" /><![CDATA[
+
+
+
+    app:layout_constraintTop_toBottomOf="@+id/unable"
         app:layout_constraintVertical_bias="0.222" />
 
+
+]]>
 </androidx.constraintlayout.widget.ConstraintLayout>

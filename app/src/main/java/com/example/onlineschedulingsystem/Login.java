@@ -109,21 +109,18 @@ public class Login extends AppCompatActivity {
                             //user is new = Account Created
                             Log.d(TAG, "onSuccess: Account Created...\n\n"+email);
                             Toast.makeText(Login.this, "Account created!\n\n" + email, Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(Login.this, StudentQueue.class));
+                            finish();
+
 
                         } else {
                             //existing user - Logged in
                             Log.d(TAG, "onSuccess: Existing User...\n"+email);
                             Toast.makeText(Login.this, "Existing User...\n\n" + email, Toast.LENGTH_SHORT).show();
-                        }
-
-                        if (new Transaction().isTransact()) {
-                            //start profile activity
                             startActivity(new Intent(Login.this, StudentQueue.class));
                             finish();
-                        } else {
-                            startActivity(new Intent(Login.this, MainPage.class));
-                            finish();
                         }
+
 
                     }
                 })

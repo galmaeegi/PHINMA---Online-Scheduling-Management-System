@@ -55,6 +55,7 @@ public class Transaction extends AppCompatActivity{
     int f_slots;
     int s_slots;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -465,6 +466,8 @@ public class Transaction extends AppCompatActivity{
 
 
 
+
+
     /*Insertion Method (MONDAY)*/
     private void insertDataMon() {
 
@@ -477,6 +480,7 @@ public class Transaction extends AppCompatActivity{
 
         Monday monday = new Monday(student_,department_,purpose_);
         MonReff.child(String.valueOf(m_maxid+1)).setValue((monday));
+
 
 
     }
@@ -565,12 +569,16 @@ public class Transaction extends AppCompatActivity{
         isTransact();
         //Sending data to Overview.class
         Intent intent = new Intent(Transaction.this,Overview.class);
+
         valueFromStudent = student_no.getText().toString();
         intent.putExtra("studentKey",valueFromStudent);
         intent.putExtra("departmentKey",valueFromDept);
         intent.putExtra("purposeKey",valueFromPurpose);
         intent.putExtra("dateKey",valueFromDate);
         intent.putExtra("queueKey",valueFromQueue);
+
+
+
         startActivity(intent);
     }
     /*To check if the student has transacted already*/

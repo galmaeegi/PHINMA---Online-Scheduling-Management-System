@@ -13,8 +13,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineSchedulingSystem">
         <activity
-            android:name=".Summary_interface"
+            android:name=".getstarted"
+            android:exported="false" />
+        <activity
+            android:name=".Step3"
+            android:exported="false" />
+        <activity
+            android:name=".Step2"
+            android:exported="false" />
+        <activity
+            android:name=".Step1"
+            android:exported="false" />
+        <activity
             android:name=".KingAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".Summary_interface"
             android:exported="false" />
         <activity
             android:name=".SetSlots"

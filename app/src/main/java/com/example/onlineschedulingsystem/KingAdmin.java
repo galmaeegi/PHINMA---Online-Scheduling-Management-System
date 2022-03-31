@@ -16,21 +16,12 @@ public class KingAdmin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_king_admin);
 
-        activate = findViewById(R.id.activate_btn);
         setslots = findViewById(R.id.setslots_btn);
         summary = findViewById(R.id.summary_btn);
 
 
-        Intent intent1 = new Intent(KingAdmin.this,AdminInterface.class);
         Intent intent2 = new Intent(KingAdmin.this,SetSlots.class);
-        Intent intent3 = new Intent(KingAdmin.this,AdminInterface.class);
-
-        activate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(intent1);
-            }
-        });
+        Intent intent3 = new Intent(KingAdmin.this,Summary_interface.class);
 
         setslots.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -26,6 +26,8 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import org.w3c.dom.Text;
+
+import java.lang.annotation.Target;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,6 +40,11 @@ public class StudentQueue extends AppCompatActivity {
     private TextView at1;
     private TextView at2;
     private TextView at3;
+    private TextView holder_txt;
+    private String data;
+    private String holder;
+
+    private int sum = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +55,16 @@ public class StudentQueue extends AppCompatActivity {
         at1 = findViewById(R.id.aq1);
         at2 = findViewById(R.id.aq2);
         at3 = findViewById(R.id.aq3);
+        holder_txt = findViewById(R.id.holder_txt);
+
+
         button = findViewById(R.id.reset);
         firebaseDatabase = FirebaseDatabase.getInstance();
+
+        Intent in = getIntent();
+        Bundle bn = in.getExtras();
+
+
 
         ///Getting Child Data///
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("QUEUE");
@@ -100,14 +115,35 @@ public class StudentQueue extends AppCompatActivity {
 
             ///Setting data in TextView///
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-            String data = dataSnapshot.child("CURRENT NUMBER").getValue().toString();
-            textView.setText(data);
+                data = dataSnapshot.child("CURRENT NUMBER").getValue().toString();
+                textView.setText(data);
+                /*Getting est time*/
+
+
+
+                if (bn != null && sum > 0) {
+                        holder = (String) bn.get("queueKey");
+                        int num1 = Integer.parseInt(holder);
+                        int num2 = Integer.parseInt(data);
+
+                         sum = (num1 - num2) * 5;
+
+                        holder_txt.setText(String.valueOf(sum));
+
+
+
+
+                } else if (sum == 0) {
+                    holder_txt.setText("0");
+                }
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
+
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

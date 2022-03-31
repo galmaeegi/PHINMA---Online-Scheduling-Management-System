@@ -6,6 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".KingAdmin">
 
+    <TextView
+        android:id="@+id/credits9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/poppins"
+        android:text="©2021 - B2G4 - All Rights Reserved."
+        android:textColor="#BFBFBF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next"
+        app:layout_constraintVertical_bias="0.993" />
+
+    <TextView
+        android:id="@+id/credits10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="PHINMA - University of Pangasinan"
+        android:textColor="#BFBFBF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/credits7" />
+
     <ImageView
         android:id="@+id/queuingheader1"
         android:layout_width="602dp"
@@ -15,21 +47,19 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kingadmin_header" />
+        app:srcCompat="@drawable/main_admin_header" />
 
     <ImageButton
         android:id="@+id/setslots_btn"
         android:layout_width="174dp"
         android:layout_height="160dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/summary_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activate_btn"
+        app:layout_constraintTop_toBottomOf="@+id/queuingheader1"
         app:srcCompat="@drawable/setslots_button"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -37,32 +67,16 @@
         android:id="@+id/summary_btn"
         android:layout_width="174dp"
         android:layout_height="160dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="308dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setslots_btn"
-        app:srcCompat="@drawable/summary_button"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageButton
-        android:id="@+id/activate_btn"
-        android:layout_width="174dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginBottom="1dp"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/setslots_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.869"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/queuingheader1"
-        app:srcCompat="@drawable/activate_button"
+        app:srcCompat="@drawable/summary_button"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton

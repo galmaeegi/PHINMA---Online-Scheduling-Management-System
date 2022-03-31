@@ -15,6 +15,10 @@ import android.widget.TextView;
 public class Overview extends AppCompatActivity {
 
     ImageButton snoutReview;
+    public int holder;
+    Boolean hasChange;
+    
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +61,7 @@ public class Overview extends AppCompatActivity {
 
         String queue = bn.getString("queueKey");
         queueDisplay.setText(queue);
+        
 
         youDisplay.setText(queue);
 
@@ -66,6 +71,7 @@ public class Overview extends AppCompatActivity {
         snoutReview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(Overview.this,WelcomeBack.class));
             }
         });
@@ -73,12 +79,23 @@ public class Overview extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Overview.this,StudentQueue.class));
+                Intent intentQueue = new Intent(Overview.this,StudentQueue.class);
+                intentQueue.putExtra("queueKey", queue);
+                startActivity(intentQueue);
+
+
             }
         });
 
 
     }
+
+    public boolean isTrue() {
+        hasChange = true;
+        return hasChange;
+    }
+
+
     @Override
     public void onBackPressed() {
     }
