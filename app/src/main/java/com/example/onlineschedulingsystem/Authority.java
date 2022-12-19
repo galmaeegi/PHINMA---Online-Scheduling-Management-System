@@ -47,6 +47,7 @@ public class Authority extends AppCompatActivity {
         auth_btn_student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 //variable for the time
                 int hourOfDay = 7;
                 int closingday = 16;
@@ -60,8 +61,12 @@ public class Authority extends AppCompatActivity {
                     c.set(Calendar.HOUR_OF_DAY, hourOfDay);
                     c.set(Calendar.MINUTE, closingday);
                     Intent intent = new Intent(Authority.this, Login.class);
-                    PendingIntent pendingIntent = PendingIntent.getActivity(Authority.this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
+                    PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(),
+                            0, intent,
+                            /* flags */ PendingIntent.FLAG_IMMUTABLE);
                     ((AlarmManager) getSystemService(ALARM_SERVICE)).set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+
+
                 }
                 else{
                     dialog.show();
